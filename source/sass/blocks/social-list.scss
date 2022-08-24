@@ -1,0 +1,14 @@
+.social-list {
+  a {
+    width: fit-content;
+    height: fit-content;
+    margin: 0 0 24px;
+
+    font-family: $ff-roboto-condensed;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: $color-default-white;
+  }
+}
