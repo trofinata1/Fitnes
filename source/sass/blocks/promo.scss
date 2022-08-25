@@ -1,34 +1,77 @@
 .promo {
-  padding: 122px 0 72px;
+  background-image: $conic-blue-to-right-top;
 
-  background-image: url("../img/decoration/promo@1x.png"),
-    $conic-blue-to-right-top;
-  background-repeat: no-repeat;
-  background-size: auto;
+  @include vp-1199 {
+    background-image: $conic-blue-to-right-top-tablet;
+  }
 
-  background-position: center right 303px, center;
-
-  @include retina {
-    background-image: url("../img/decoration/promo@2x.png"),
-      $conic-blue-to-right-top;
+  @include vp-767 {
+    background-image: $conic-blue-to-right-top-mobile;
   }
 
   .container {
+    position: relative;
+
     display: flex;
+    flex-direction: column;
 
     max-width: 1160px;
     margin: 0 auto;
+    padding: 163px 0 94px;
+
+    background-image: url("../img/decoration/promo@1x.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+
+    background-position: center right 203px;
+
+    @include vp-1199 {
+      padding: 133px 45px 106px;
+
+      background-image: url("../img/decoration/promo-tablet@1x.png");
+      background-position: center right 30%;
+    }
+
+    @include vp-1023 {
+      background-position: center right 45px;
+    }
+
+    @include vp-767 {
+      width: 100%;
+      padding: 110px 15px 80px;
+
+      background-image: none;
+    }
+
+    @include retina {
+      background-image: url("../img/decoration/promo@2x.png");
+
+      @include vp-1199 {
+        background-image: url("../img/decoration/promo-tablet@2x.png");
+      }
+    }
   }
 
   div {
     position: relative;
 
-    max-width: 377px;
+    min-width: 397px;
     margin: 0 auto 0 0;
+
+    @include vp-1199 {
+      min-width: 324px;
+    }
+
+    @include vp-767 {
+      min-width: 290px;
+      max-width: 100%;
+      width: 290px;
+      margin: 0 auto;
+    }
   }
 
   p {
-    margin: 0 0 25px;
+    margin: 0 0 5px;
 
     font-family: $ff-bebas-neue;
     font-weight: 400;
@@ -37,10 +80,24 @@
     letter-spacing: 0.03em;
     text-align: right;
     color: $color-default-white;
+
+    @include vp-1199 {
+      margin: 0;
+
+      font-size: 34px;
+      line-height: 41px;
+    }
+
+    @include vp-767 {
+      margin: 0 0 7px;
+
+      font-size: 28px;
+      line-height: 34px;
+    }
   }
 
   h1 {
-    margin: 0 0 80px;
+    margin: 0 0 57px;
 
     font-family: $ff-bebas-neue;
     font-weight: 700;
@@ -49,11 +106,24 @@
     letter-spacing: 0.03em;
     text-align: right;
     color: $color-default-white;
+
+    @include vp-1199 {
+      margin: 0 0 43px;
+
+      font-size: 86px;
+      line-height: 86px;
+    }
+
+    @include vp-767 {
+      font-size: 78px;
+      line-height: 78px;
+    }
   }
 
   ul {
     position: absolute;
-    top: 212px;
+    bottom: 83px;
+    left: 20px;
 
     max-width: 113px;
     margin: 0;
@@ -67,10 +137,20 @@
     color: $color-default-white;
 
     list-style-type: none;
+
+    @include vp-1199 {
+      bottom: 60px;
+      left: 0;
+    }
+
+    @include vp-767 {
+      bottom: 53px;
+    }
   }
 
   .social-list {
-    position: static;
+    top: 465px;
+    left: 99%;
 
     max-width: fit-content;
     margin: auto 0 0 0;
@@ -81,8 +161,20 @@
     justify-content: center;
     align-items: center;
 
-    width: 230px;
-    height: 57px;
-    margin: 0 0 0 auto;
+    width: 235px;
+    height: 63px;
+    margin: 0 0 0 160px;
+
+    @include vp-1199 {
+      width: 183px;
+      height: 59px;
+      margin: 0 0 0 140px;
+    }
+
+    @include vp-767 {
+      width: 100%;
+      height: 62px;
+      margin: 0;
+    }
   }
 }

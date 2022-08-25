@@ -14,18 +14,12 @@
   &--round {
     position: relative;
 
-    outline: $outline-default-color;
-    border-radius: 50%;
-
-    &::after {
-      position: absolute;
-      top: 14px;
-      right: 14px;
-      bottom: 14px;
-      left: 14px;
-
-      background-color: $red-to-right-top;
-    }
+    // background-image: $blue-to-right;
+    // border-radius: 50%;
+    // border: 2px solid transparent;
+    // mask: $transparent padding-box,
+    //   $transparent;
+    // mask-composite: exclude;
   }
 
   &--blue-border {

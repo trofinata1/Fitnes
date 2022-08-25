@@ -65,3 +65,9 @@
   /* stylelint-disable-next-line */
   transition: none !important;
 }
+
+.tablet-hidden {
+  @include vp-1199 {
+    display: none;
+  }
+}
