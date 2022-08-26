@@ -58,32 +58,71 @@
         </section>
         <section class="gym">
           <div class="container">
-            <div>
+            <div class="gym__info">
               <h2>Тренажерный зал</h2>
               <p class="gym__subtitle">Просторный зал площадью 900&nbsp;кв/м</p>
               <p>
                 Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела и&nbsp;здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.
               </p>
-              <p>
+              <p class="tablet-hidden">
                 В&nbsp;зале расположены отдельная зона для Crossfit и&nbsp;кардио-зона с&nbsp;40&nbsp;тренажерами. Также в&nbsp;фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.
               </p>
             </div>
-            <picture>
-              <source type="image/webp" srcset="img/content/gym@1x.webp, img/content/gym@2x.webp 2x">
-              <!-- 1х: 660px; 2x: 1320px -->
-              <img src="img/content/gym@1x.jpg" srcset="img/content/gym@2x.jpg 2x" width="660" height="401" alt="Фотография большого светлого оборудованного различными тренажерами фитнес-зала.">
-            </picture>
+            <div class="gym__photo">
+              <picture>
+                <source type="image/webp" srcset="img/content/gym@1x.webp, img/content/gym@2x.webp 2x">
+                <!-- 1х: 660px; 2x: 1320px -->
+                <img src="img/content/gym@1x.jpg" srcset="img/content/gym@2x.jpg 2x" width="660" height="401" alt="Фотография большого светлого оборудованного различными тренажерами фитнес-зала.">
+              </picture>
+            </div>
             <div class="gym__video">
               <iframe width="364" height="228"
-                src="https://www.youtube.com/embed/9TZXsZItgdw"
+                src="https://www.youtube.com/embed/9TZXsZItgdw?enablejsapi=1"
                 title="Бесплатные интерактивные онлайн-курсы"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
               </iframe>
-              <button type="button" class="btn btn--round">
+              <button type="button" class="btn btn--round gym__btn" aria-label="Нажать, чтобы запустить видео.">
+                <svg width="13" height="15" role="img" focusable="false" aria-hidden="true">
+                  <use xlink:href="img/sprite_auto.svg#triangle"></use>
+                </svg>
               </button>
             </div>
+          </div>
+        </section>
+        <section class="rates">
+          <div class="container">
+            <h2>Абонементы</h2>
+            <div class="tabs">
+              <ul class="tabs__list">
+                <li class="tabs__item">
+                  <button class="tabs__btn is-active" data-tabs-path="1">1 месяц</button>
+                </li>
+                <li class="tabs__item">
+                  <button class="tabs__btn" data-tabs-path="6">6 месяцев</button>
+                </li>
+                <li class="tabs__item">
+                  <button class="tabs__btn" data-tabs-path="12">12 месяцев</button>
+                </li>
+              </ul>
+              <ul class="tabs__content">
+                <li>
+                  <h3>С тренером</h3>
+                  <p data-tabs-target="coach">12 занятий</p>
+                  <p data-tabs-target="coach-price">5000</p>
+                </li>
+                <li>
+                  <h3>Дневной</h3>
+                  <p>с 8:00 до 17:00 </p>
+                  <p data-tabs-target="daily">1700</p>
+                </li>
+                <li>
+                  <h3>Полный день</h3>
+                  <p>с 8:00 до 22:00 </p>
+                  <p data-tabs-target="full">2700</p>
+                </li>
+              </ul>
           </div>
         </section>
       </main>

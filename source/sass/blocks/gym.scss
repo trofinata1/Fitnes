@@ -1,55 +1,184 @@
 .gym {
-  padding: 120px 0;
+  padding: 120px 0 235px;
+
+  @include vp-1199 {
+    padding: 55px 0 183px;
+  }
+
+  @include vp-767 {
+    padding: 55px 0 77px;
+  }
 
   .container {
+    position: relative;
+
     display: flex;
 
-    width: 1100px;
-    max-width: 1100px;
+    width: 1160px;
+    max-width: 1160px;
     margin: 0 auto;
+    padding: 0 0 0 60px;
+
+    @include vp-1199 {
+      flex-direction: column;
+
+      width: 100%;
+      max-width: 100%;
+      padding: 0 45px;
+    }
+
+    @include vp-767 {
+      width: 100%;
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+
+  img {
+    @include vp-1199 {
+      width: 100%;
+      height: 345px;
+      object-fit: cover;
+    }
+
+    @include vp-767 {
+      height: 313px;
+    }
   }
 
   h2 {
-    margin: 0 0 25px;
+    margin: 45px 0 10px;
 
     font-family: $ff-bebas-neue;
     font-weight: 700;
     font-size: 49px;
     line-height: 49px;
     letter-spacing: 0.03em;
+
+    overflow-wrap: break-word;
+
+    @include vp-1199 {
+      margin: 45px 0 7px;
+
+      font-size: 42px;
+      line-height: 42px;
+    }
+
+    @include vp-767 {
+      margin: 14px 0 5px;
+
+      font-size: 32px;
+      line-height: 32px;
+      text-align: left;
+    }
   }
 
   p {
-    margin: 0;
+    max-width: 355px;
+    margin: 0 0 8px;
 
     font-family: $ff-roboto-condensed;
     font-weight: 300;
     font-size: 16px;
     line-height: 24px;
+
+    @include vp-1199 {
+      max-width: 512px;
+      margin: 0 auto 43px;
+    }
+
+    @include vp-767 {
+      max-width: 100%;
+      margin: 0 auto 33px;
+
+      text-align: left;
+    }
   }
 
   .gym__subtitle {
-    margin: 0 0 65px;
+    margin: 0 0 39px;
 
     font-weight: 400;
     font-size: 18px;
     line-height: 27px;
+
+    @include vp-1199 {
+      margin: 0 auto 35px;
+    }
+
+    @include vp-767 {
+      margin: 0 auto 25px;
+    }
   }
 
   div {
-    max-width: 355px;
     margin: 0 85px 0 0;
+
+    @include vp-1199 {
+      margin: 0;
+
+      text-align: center;
+    }
+  }
+
+  .gym__photo {
+    width: 660px;
+    height: 401px;
+    margin: 0;
+
+    background-color: $color-darker-cerulean;
+
+    @include vp-1199 {
+      width: 100%;
+      height: 345px;
+    }
+
+    @include vp-767 {
+      height: 313px;
+      margin: 0 0 39px;
+    }
   }
 
   .gym__video {
     position: absolute;
-    right: 462px;
-    bottom: 0;
+    right: 359px;
+    bottom: -115px;
 
     width: 364px;
     max-width: 364px;
     height: 228px;
     margin: 0;
+
+    background-color: $color-cobalt;
+
+    @include vp-1199 {
+      bottom: -103px;
+      left: 50%;
+
+      width: 466px;
+      max-width: 466px;
+      height: 267px;
+      margin: 0 0 0 -233px;
+    }
+
+    @include vp-1023 {
+      bottom: -83px;
+
+      width: 266px;
+      height: 167px;
+      margin: 0 0 0 -133px;
+    }
+
+    @include vp-767 {
+      position: relative;
+      right: 0;
+      bottom: auto;
+      left: 0;
+
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+    }
 
     &::after {
       position: absolute;
@@ -58,8 +187,9 @@
       bottom: 0;
       left: 0;
 
-
       background-image: url("../img/decoration/video-cover@1x.png");
+      background-repeat: no-repeat;
+      background-size: cover;
 
       content: "";
       z-index: 1;
@@ -88,10 +218,65 @@
     top: 50%;
     left: 50%;
 
-    width: 100px;
-    height: 100px;
-    margin: -50px 0 0 -50px;
+    justify-content: center;
+    align-items: center;
+
+    width: 72px;
+    height: 72px;
+    margin: -36px 0 0 -36px;
 
     z-index: 3;
+
+    @include vp-1199 {
+      width: 52px;
+      height: 52px;
+      margin: -26px 0 0 -26px;
+    }
+
+    &::before {
+      position: absolute;
+
+      width: 100px;
+      height: 100px;
+
+      background-image: url("../img/decoration/round@1x.png");
+
+      content: "";
+
+      @include vp-1199 {
+        width: 73px;
+        height: 73px;
+
+        background-size: contain;
+      }
+
+      @include retina {
+        background-image: url("../img/decoration/round@2x.png");
+      }
+    }
+  }
+
+  iframe {
+    position: relative;
+
+    @include vp-1199 {
+      width: 466px;
+      height: 267px;
+    }
+
+    @include vp-1023 {
+      width: 266px;
+      height: 167px;
+    }
+
+    @include vp-767 {
+      width: 100%;
+    }
+  }
+
+  .gym__info {
+    @include vp-767 {
+      margin: 0 15px;
+    }
   }
 }

@@ -71,3 +71,25 @@
     display: none;
   }
 }
+
+.mobile-hidden {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.tablet-shown {
+  display: none;
+
+  @include vp-1199 {
+    display: block;
+  }
+}
+
+.mobile-shown {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
+}
