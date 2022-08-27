@@ -3,6 +3,11 @@
 
   padding: 10px 20px;
 
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   color: $color-default-white;
 
   background-color: transparent;
@@ -28,9 +33,26 @@
   }
 
   &--blue-border {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
     color: $color-sapphire;
 
     border: $border-blue;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        color: $color-default-white;
+
+        background-image: $blue-to-right-default;
+
+        border: none;
+      }
+    }
   }
 
   &--color {
@@ -41,12 +63,5 @@
     opacity: 0.5;
 
     pointer-events: none;
-  }
-
-  @media (hover: hover), screen and (min-width: 0\0) {
-    &:not(.btn--round):hover,
-    &:not(.btn--round):focus {
-      opacity: 0.8;
-    }
   }
 }

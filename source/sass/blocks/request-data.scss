@@ -1,0 +1,58 @@
+.request-data {
+  p {
+    width: fit-content;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: $color-default-white;
+
+    &:not(.request-data__title) {
+      display: flex;
+
+      margin: 0;
+
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 45px;
+      color: $color-default-white;
+
+      border-top: $border-white;
+
+      @include vp-1199 {
+        font-size: 24px;
+        line-height: 31px;
+      }
+    }
+  }
+
+  span {
+    margin: 0 0 0 7px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: $color-default-white;
+
+    @include vp-1199 {
+      font-size: 10px;
+      line-height: 15px;
+    }
+  }
+
+  .request-data__title {
+    margin: 0;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: $color-default-white;
+
+    @include vp-1199 {
+      margin: 0;
+
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+}

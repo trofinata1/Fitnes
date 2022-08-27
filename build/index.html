@@ -91,38 +91,133 @@
             </div>
           </div>
         </section>
-        <section class="rates">
+        <section class="rates tabs">
           <div class="container">
             <h2>Абонементы</h2>
-            <div class="tabs">
-              <ul class="tabs__list">
-                <li class="tabs__item">
-                  <button class="tabs__btn is-active" data-tabs-path="1">1 месяц</button>
-                </li>
-                <li class="tabs__item">
-                  <button class="tabs__btn" data-tabs-path="6">6 месяцев</button>
-                </li>
-                <li class="tabs__item">
-                  <button class="tabs__btn" data-tabs-path="12">12 месяцев</button>
-                </li>
-              </ul>
-              <ul class="tabs__content">
-                <li>
-                  <h3>С тренером</h3>
-                  <p data-tabs-target="coach">12 занятий</p>
-                  <p data-tabs-target="coach-price">5000</p>
-                </li>
-                <li>
-                  <h3>Дневной</h3>
-                  <p>с 8:00 до 17:00 </p>
-                  <p data-tabs-target="daily">1700</p>
-                </li>
-                <li>
-                  <h3>Полный день</h3>
-                  <p>с 8:00 до 22:00 </p>
-                  <p data-tabs-target="full">2700</p>
-                </li>
-              </ul>
+            <ul class="tabs__btns">
+              <li>
+                <button class="tabs__btn tabs-btn is-active" data-tabs-path="1">1 месяц</button>
+              </li>
+              <li>
+                <button class="tabs__btn tabs-btn" data-tabs-path="6">6 месяцев</button>
+              </li>
+              <li>
+                <button class="tabs__btn tabs-btn" data-tabs-path="12">12 месяцев</button>
+              </li>
+            </ul>
+            <ul class="tabs-content tabs__content is-active" data-tabs-target="1">
+              <li class="tabs__card">
+                <h3>С тренером</h3>
+                <p>12 занятий</p>
+                <p class="tabs__price" data-price="5000">5000 <span class="visually-hidden">рублей</span>
+                  <svg width="30" height="42" role="img" focusable="false" aria-hidden="true">
+                    <use xlink:href="img/sprite_auto.svg#rub"></use>
+                  </svg>
+                </p>
+                <a href="#" class="btn btn--blue-border">Купить абонемент</a>
+              </li>
+              <li class="tabs__card">
+                <h3>Дневной</h3>
+                <p>с 8:00 до 17:00 </p>
+                <p class="tabs__price" data-price="1700">1700<span class="visually-hidden">рублей</span>
+                  <svg width="30" height="42" role="img" focusable="false" aria-hidden="true">
+                    <use xlink:href="img/sprite_auto.svg#rub"></use>
+                  </svg>
+                </p>
+                <a href="#" class="btn btn--blue-border">Купить абонемент</a>
+              </li>
+              <li class="tabs__card">
+                <h3>Полный день</h3>
+                <p>с 8:00 до 22:00 </p>
+                <p class="tabs__price" data-price="2700">2700<span class="visually-hidden">рублей</span>
+                  <svg width="30" height="42" role="img" focusable="false" aria-hidden="true">
+                    <use xlink:href="img/sprite_auto.svg#rub"></use>
+                  </svg>
+                </p>
+                <a href="#" class="btn btn--blue-border">Купить абонемент</a>
+              </li>
+            </ul>
+            <ul class="tabs-content tabs__content" data-tabs-target="6">
+              <li class="tabs__card">
+                <h3>С тренером</h3>
+                <p>72 занятия</p>
+                <p class="tabs__price" data-price="25000">25000<span class="visually-hidden">рублей</span>
+                  <svg width="30" height="42" role="img" focusable="false" aria-hidden="true">
+                    <use xlink:href="img/sprite_auto.svg#rub"></use>
+                  </svg>
+                </p>
+                <a href="#" class="btn btn--blue-border">Купить абонемент</a>
+              </li>
+              <li class="tabs__card">
+                <h3>Дневной</h3>
+                <p>с 8:00 до 17:00 </p>
+                <p class="tabs__price" data-price="8200">8200<span class="visually-hidden">рублей</span>
+                  <svg width="30" height="42" role="img" focusable="false" aria-hidden="true">
+                    <use xlink:href="img/sprite_auto.svg#rub"></use>
+                  </svg>
+                </p>
+                <a href="#" class="btn btn--blue-border">Купить абонемент</a>
+              </li>
+              <li class="tabs__card">
+                <h3>Полный день</h3>
+                <p>с 8:00 до 22:00 </p>
+                <p class="tabs__price" data-price="14200">14200<span class="visually-hidden">рублей</span>
+                  <svg width="30" height="42" role="img" focusable="false" aria-hidden="true">
+                    <use xlink:href="img/sprite_auto.svg#rub"></use>
+                  </svg>
+                </p>
+                <a href="#" class="btn btn--blue-border">Купить абонемент</a>
+              </li>
+            </ul>
+            <ul class="tabs-content tabs__content" data-tabs-target="12">
+              <li class="tabs__card">
+                <h3>С тренером</h3>
+                <p>144 занятия</p>
+                <p class="tabs__price" data-price="45000">45000<span class="visually-hidden">рублей</span>
+                  <svg width="30" height="42" role="img" focusable="false" aria-hidden="true">
+                    <use xlink:href="img/sprite_auto.svg#rub"></use>
+                  </svg>
+                </p>
+                <a href="#" class="btn btn--blue-border">Купить абонемент</a>
+              </li>
+              <li class="tabs__card">
+                <h3>Дневной</h3>
+                <p>с 8:00 до 17:00 </p>
+                <p class="tabs__price" data-price="14000">14000<span class="visually-hidden">рублей</span>
+                  <svg width="30" height="42" role="img" focusable="false" aria-hidden="true">
+                    <use xlink:href="img/sprite_auto.svg#rub"></use>
+                  </svg>
+                </p>
+                <a href="#" class="btn btn--blue-border">Купить абонемент</a>
+              </li>
+              <li class="tabs__card">
+                <h3>Полный день</h3>
+                <p>с 8:00 до 22:00 </p>
+                <p class="tabs__price" data-price="25000">25000<span class="visually-hidden">рублей</span>
+                  <svg width="30" height="42" role="img" focusable="false" aria-hidden="true">
+                    <use xlink:href="img/sprite_auto.svg#rub"></use>
+                  </svg>
+                </p>
+                <a href="#" class="btn btn--blue-border">Купить абонемент</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="request">
+          <div class="container">
+            <div class="request__info">
+              <h2>SUPER GAMES</h2>
+              <p class="request__subtitle">Ежегодные соревнования по&nbsp;CrossFit</p>
+              <div class="request-data request__date">
+                <p class="request-data__title">Дата</p>
+                <p>7 <span>Марта<br>2019</span></p>
+              </div>
+              <div class="request-data request__time">
+                <p class="request-data__title">Время</p>
+                <p>12:00</p>
+              </div>
+              <a href="#" class="btn">заполнить заявку</a>
+            </div>
           </div>
         </section>
       </main>

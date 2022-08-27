@@ -20,12 +20,22 @@ $color-venetian-red:                #b80027;
 $color-cobalt:                      #003eb7;
 $color-cobalt-transparent:          rgba($color-cobalt, 0.2);
 $color-sapphire:                    #102654;
+$color-sapphire-transparent:        rgba($color-sapphire, 0.5);
+$color-ghost-white:                 #f8f9fc;
+$color-grey:                        #787878;
+$color-grey-transparent:            rgba($color-grey, 0.2);
+$color-crimson:                     #d10a42;
+$color-chambray:                    #495a7d;
+$color-egyptian-blue:               #103aae;
+$color-whisper:                     #e8e8e8;
+$color-whisper-transparent:         rgba($color-whisper, 0.48);
 
 // Gradient
 
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
 $red-to-right-top:                  linear-gradient(44.89deg, $color-dark-cerulean 25.38%, $color-venetian-red 74.89%);
 $blue-to-right-top:                 linear-gradient(44.89deg, $color-venetian-red 25.38%, $color-dark-cerulean 74.89%);
+$blue-to-left-top:                  linear-gradient(to right bottom, $color-venetian-red 25.38%, $color-dark-cerulean 74.89%);
 $blue-to-right-default:             linear-gradient(97.05deg, $color-torch-red 17.6%, $color-cobalt 95.31%);
 $blue-to-right:                     linear-gradient(44.89deg, $color-torch-red-transparent, $color-cobalt-transparent);
 $conic-blue-to-right-top:           conic-gradient(from 130.31deg at 16.03% 39.06%, $color-venetian-red -46.69deg, $color-dark-cerulean 32.24deg, $color-venetian-red 313.31deg, $color-dark-cerulean 392.24deg);
@@ -35,7 +45,10 @@ $transparent:                       linear-gradient($color-default-white 0 0);
 
 // Border
 $border-default-white:               4px solid $color-default-white;
+$border-white-medium:                2px solid $color-default-white;
+$border-white:                       1px solid $color-default-white;
 $border-blue:                        2px solid $color-sapphire;
+$border-grey:                        2px solid $color-grey-transparent;
 
 // Shadow
 $shadow-default:                     inset 0 0 0 100vw $color-default-white;

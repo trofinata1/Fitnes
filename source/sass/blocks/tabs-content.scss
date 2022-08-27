@@ -1,0 +1,83 @@
+.tabs-content {
+  display: none;
+  opacity: 0;
+
+  &.is-active {
+    display: grid;
+    opacity: 1;
+
+    animation: fadeInFromNone 1s ease-in-out;
+  }
+
+  li {
+    position: relative;
+
+    padding: 64px 77px 68px;
+
+    text-align: center;
+
+    background-color: $color-default-white;
+
+    @include vp-767 {
+      padding: 52px 42px 50px;
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus-within {
+        & a {
+          color: $color-default-white;
+
+          background-image: $blue-to-right-default;
+
+          border: none;
+        }
+
+        &::before {
+          display: block;
+        }
+      }
+    }
+
+    &::before {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+
+      display: none;
+
+      border: 7px solid transparent;
+      border-image: $blue-to-left-top;
+      border-image-slice: 1;
+
+      content: "";
+    }
+  }
+
+  h3 {
+    margin: 0 0 10px;
+
+    font-size: 26px;
+    line-height: 29px;
+
+    @include vp-767 {
+      margin: 0 0 9px;
+
+      font-size: 22px;
+      line-height: 24px;
+    }
+  }
+
+  p {
+    margin: 0 0 65px;
+
+    font-weight: 400;
+    color: $color-chambray;
+
+    @include vp-767 {
+      margin: 0 0 55px;
+    }
+  }
+}
