@@ -1,4 +1,4 @@
-const swiper = () => {
+export const swiper = () => {
 
   /**
  * Swiper 7.4.1

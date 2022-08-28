@@ -27,14 +27,16 @@
   }
 
   span {
-    margin: 0 0 0 7px;
+    margin: 5px 0 0 7px;
 
     font-weight: 400;
     font-size: 14px;
-    line-height: 21px;
+    line-height: 19px;
     color: $color-default-white;
 
     @include vp-1199 {
+      margin: 1px 0 0 5px;
+
       font-size: 10px;
       line-height: 15px;
     }
@@ -53,6 +55,22 @@
 
       font-size: 12px;
       line-height: 14px;
+    }
+
+    @include vp-767 {
+      line-height: 17px;
+    }
+
+    &--date {
+      margin: -5px 0 4px;
+
+      @include vp-1199 {
+        margin: -3px 0 3px;
+      }
+    }
+
+    &--time {
+      margin: 5px 0 4px;
     }
   }
 }
