@@ -1,5 +1,5 @@
-// Swiper 7.4.1
-import './vendor/swiper';
+// Swiper 8.3.2
+import Swiper from './vendor/swiper';
 
 window.addEventListener('load', () => {
   const slider = document.querySelector('.swiper');
@@ -39,3 +39,4 @@ window.addEventListener('load', () => {
     });
   }
 });
+

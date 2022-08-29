@@ -1,0 +1,47 @@
+.features-card {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  column-gap: 30px;
+
+  .features-card__numbers {
+    font-weight: 700;
+    font-size: 71px;
+    line-height: 106px;
+
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &:not(.features-card__numbers--another-gradient) {
+      background-image: $red-to-left-top-wide;
+    }
+
+    &--another-gradient {
+      background-image: $red-to-left-top;
+    }
+  }
+
+  span {
+    position: absolute;
+    bottom: 0;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: $color-persian-blue;
+  }
+
+  .features-card__info {
+    position: relative;
+    top: -20px;
+  }
+
+  b {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 33px;
+  }
+
+  .features-card__description {
+    line-height: 22px;
+  }
+}
