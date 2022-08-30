@@ -1,55 +1,167 @@
 .features {
-  padding: 120px 0;
+  padding: 117px 0 121px;
 
   background-color: $color-ghost-white;
+
+  @include vp-1199 {
+    padding: 99px 0 74px;
+  }
+
+  @include vp-767 {
+    padding: 67px 0 65px;
+  }
+
+  .container {
+    @include vp-767 {
+      padding: 0;
+    }
+  }
 
   h2 {
     width: 100%;
     max-width: 1366px;
-    margin: 0 auto 80px;
+    margin: 0 auto 62px;
     padding: 0 103px;
 
     font-family: $ff-bebas-neue;
     font-size: 49px;
     line-height: 49px;
     letter-spacing: 0.03em;
-  }
+    text-align: center;
 
-  .container {
-    display: grid;
-    grid-template-columns: 340px 240px 340px;
-    column-gap: 60px;
+    @include vp-1199 {
+      margin: 0 auto 43px;
 
-    min-height: 307px;
+      font-size: 42px;
+      line-height: 42px;
+    }
+
+    @include vp-767 {
+      margin: 0 auto 59px;
+      padding: 0 15px;
+
+      font-size: 32px;
+      line-height: 32px;
+    }
   }
 
   p {
     margin: 0;
   }
 
-  .features__list {
-    position: relative;
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 240px 1fr;
+    column-gap: 60px;
+    row-gap: 75px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    width: 1040px;
 
-    &::after {
-      position: absolute;
-      top: 50%;
+    margin: 0 auto;
+    padding: 0;
+
+    list-style-type: none;
+
+    @include vp-1199 {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 34px;
 
       width: 100%;
-      height: 2px;
-      margin-top: -1px;
+    }
 
-      background-color: $color-crimson-transparent;
+    @include vp-767 {
+      gap: 52px;
 
-      content: "";
+      width: 100%;
+    }
+  }
+
+  li {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 33px;
+
+    @include vp-1199 {
+      column-gap: 30px;
+
+      width: 46%;
+    }
+
+    @include vp-839 {
+      width: 294px;
+    }
+
+    @include vp-767 {
+      display: flex;
+      flex-direction: column;
+
+      width: 100%;
+      margin: 0 auto;
+
+      text-align: center;
+    }
+
+    &:nth-last-child(-n+2) {
+      padding: 0;
+    }
+
+    &:not(.features__center-item) {
+      padding: 0 0 56px;
+
+      @include vp-1199 {
+        padding: 0;
+      }
+
+      @include vp-767 {
+        padding: 0 46px;
+      }
+    }
+
+    &:not(:nth-last-child(-n+2), ) {
+      &::after {
+        position: absolute;
+        bottom: -1px;
+
+        width: 100%;
+        height: 2px;
+
+        background-color: $color-crimson-transparent;
+
+        content: "";
+
+        @include vp-1199 {
+          display: none;
+        }
+      }
+    }
+
+    &:nth-child(4),
+    &:nth-child(5) {
+      @include vp-1199 {
+        margin: 10px 0 0;
+      }
+
+      @include vp-767 {
+        margin: 0;
+      }
     }
   }
 
   .features__center-item {
-    padding: 68px 34px 65px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    display: block;
+
+    width: 240px;
+    height: 305px;
+    margin: 10px 0 0;
+    padding: 50px 33px 49px 29px;
 
     font-weight: 700;
     font-size: 26px;
@@ -58,17 +170,72 @@
     color: $color-default-white;
 
     background-color: $color-resolution-blue;
+
+    @include vp-1199 {
+      width: 640px;
+      height: 239px;
+
+      margin: -10px auto 0;
+      padding: 31px 112px 30px 110px;
+
+      font-size: 22px;
+      line-height: 33px;
+
+      overflow-y: scroll;
+    }
+
+    @include vp-839 {
+      width: 442px;
+    }
+
+    @include vp-767 {
+      width: 100%;
+      padding: 35px 55px 15px;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 
   .features__center-item-numbers {
     font-weight: 700;
     font-size: 74px;
-    line-height: 111px;
+    line-height: 81px;
+    word-break: break-all;
+
+    @include vp-1199 {
+      line-height: 76px;
+    }
+
+    & + span {
+      padding: 0 0 0 5px;
+
+      word-break: break-all;
+
+      @include vp-767 {
+        display: block;
+
+        margin: -5px 0 0;
+        padding: 0;
+      }
+    }
   }
 
   .features__center-item-description {
+    margin: 32px 0 0;
+    padding: 0 0 0 6px;
+
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+
+    @include vp-1199 {
+      margin: 13px 0 0;
+    }
+
+    @include vp-767 {
+      margin: 8px 0 0 -3px;
+    }
   }
 }
