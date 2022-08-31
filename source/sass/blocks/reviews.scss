@@ -1,0 +1,17 @@
+.reviews {
+  h2 {
+    margin: 0 0 62px;
+
+    font-family: $ff-bebas-neue;
+    font-size: 49px;
+    line-height: 49px;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+
+  li {
+    background-color: $color-resolution-blue;
+    
+    box-shadow: $shadow-black-forest;
+  }
+}

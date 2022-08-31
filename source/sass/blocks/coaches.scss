@@ -166,6 +166,8 @@
     background-size: contain;
     border: none;
 
+    cursor: pointer;
+
     @include vp-767 {
       bottom: 129px;
 

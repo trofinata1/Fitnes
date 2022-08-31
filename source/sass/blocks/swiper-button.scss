@@ -1,6 +1,6 @@
 .swiper-button {
   &--next {
-    right: -36px;
+    right: -56px;
 
     transform: rotate(180deg);
 
@@ -14,7 +14,7 @@
   }
 
   &--prev {
-    left: -36px;
+    left: -56px;
 
     @include vp-1199 {
       left: 45px;

@@ -2,7 +2,10 @@
 import Swiper from './vendor/swiper';
 
 window.addEventListener('load', () => {
+
   const slider = document.querySelector('.swiper');
+  const sliderReviews = document.querySelector('.swiper-reviews');
+
   if (slider) {
     const swiper = new Swiper('.swiper', {
       loop: 'true',
@@ -36,6 +39,18 @@ window.addEventListener('load', () => {
           spaceBetween: 40,
         },
       },
+    });
+
+  }
+
+  if (sliderReviews) {
+    const swiperReviews = new Swiper('.swiper-reviews', {
+      loop: 'false',
+      navigation: {
+        nextEl: '.swiper-button--next',
+        prevEl: '.swiper-button--prev',
+      },
+      slidesPerView: 1,
     });
   }
 });

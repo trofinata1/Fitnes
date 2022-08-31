@@ -1,14 +1,14 @@
 .features {
-  padding: 117px 0 121px;
+  padding: 117px 0 35px;
 
   background-color: $color-ghost-white;
 
   @include vp-1199 {
-    padding: 99px 0 74px;
+    padding: 99px 0 70px;
   }
 
   @include vp-767 {
-    padding: 67px 0 65px;
+    padding: 67px 0 63px;
   }
 
   .container {

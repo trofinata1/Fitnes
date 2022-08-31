@@ -1044,6 +1044,7 @@ button,
   background-repeat: no-repeat;
   background-size: contain;
   border: none;
+  cursor: pointer;
 }
 
 .coaches-info ul {
@@ -1095,7 +1096,7 @@ button,
 }
 
 .features {
-  padding: 117px 0 121px;
+  padding: 117px 0 35px;
   background-color: #f8f9fc;
 }
 
@@ -1410,6 +1411,64 @@ button,
   margin: 0 10px 0 0;
 }
 
+.main-offer div {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  padding: 32px 46px 45px 45px;
+  color: #ffffff;
+  background-color: #ed0233;
+}
+
+.main-offer div::after {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: #003d85;
+  background-image: url("../img/decoration/sales@1x.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.main-offer span {
+  display: block;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 70px;
+  word-break: break-all;
+}
+
+.main-offer .main-offer__title {
+  margin: 0 0 15px;
+  font-size: 28px;
+  line-height: 44px;
+  color: #ffffff;
+  word-break: break-all;
+}
+
+.main-offer .main-offer__description {
+  font-size: 18px;
+  line-height: 25px;
+  color: #ffffff;
+}
+
+.main-offer .main-offer__link {
+  font-size: 14px;
+  line-height: 16px;
+  word-break: break-all;
+  color: #ffffff;
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -1520,6 +1579,97 @@ button,
   visibility: visible;
   opacity: 1;
   pointer-events: auto;
+}
+
+.offers {
+  padding: 120px 0;
+}
+
+.offers h2 {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto 50px;
+  font-family: "BebasNeue", "Arial", sans-serif;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  word-break: break-all;
+}
+
+.offers ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (auto)[2];
+  grid-template-rows: repeat(2, auto);
+  gap: 40px;
+  list-style-type: none;
+}
+
+.offers li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 211px;
+  padding: 25px 35px 30px 28px;
+  border: 7px solid transparent;
+  -o-border-image: -o-linear-gradient(left top, #b80027 25.38%, #003d85 74.89%);
+  border-image: -webkit-gradient(linear, left top, right bottom, color-stop(25.38%, #b80027), color-stop(74.89%, #003d85));
+  border-image: linear-gradient(to right bottom, #b80027 25.38%, #003d85 74.89%);
+  border-image-slice: 1;
+}
+
+.offers a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto 0 0;
+  padding: 10px 0 0;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  word-break: break-all;
+  color: #1c3374;
+}
+
+.offers a:hover,
+.offers a:focus {
+  opacity: 0.8;
+}
+
+.offers h3 {
+  margin: 0 0 8px;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 26px;
+  word-break: break-all;
+  color: #1c3374;
+}
+
+.offers p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1c3374;
+}
+
+.offers .main-offer {
+  -ms-grid-row: 2 span;
+  grid-row-start: 2 span;
+  min-height: 462px;
+  padding: 0;
+  border: none;
 }
 
 .promo {
@@ -1875,6 +2025,21 @@ button,
   margin: 5px 0 4px;
 }
 
+.reviews h2 {
+  margin: 0 0 62px;
+  font-family: "BebasNeue", "Arial", sans-serif;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.reviews li {
+  background-color: #1c3374;
+  -webkit-box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
+  box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
+}
+
 .social-list a {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -1899,14 +2064,19 @@ button,
 }
 
 .swiper-button--next {
-  right: -36px;
+  right: -56px;
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
 .swiper-button--prev {
-  left: -36px;
+  left: -56px;
+}
+
+.swiper-reviews {
+  width: 560px;
+  height: 242px;
 }
 
 .tabs-btn.is-active {
@@ -1946,10 +2116,10 @@ button,
 
 .tabs-content li::before {
   position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   display: none;
   border: 7px solid transparent;
   -o-border-image: -o-linear-gradient(left top, #b80027 25.38%, #003d85 74.89%);
@@ -2070,7 +2240,7 @@ button,
   }
 
   .features {
-    padding: 99px 0 74px;
+    padding: 99px 0 70px;
   }
 
   .features h2 {
@@ -2233,6 +2403,61 @@ button,
     height: 17px;
   }
 
+  .main-offer div {
+    width: 41%;
+    padding: 32px 40px 45px 45px;
+  }
+
+  .main-offer div::after {
+    display: none;
+  }
+
+  .main-offer .main-offer__link {
+    text-underline-offset: 3px;
+  }
+
+  .main-offer::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 59%;
+    height: 100%;
+    background-image: url("../img/decoration/sales-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+  }
+
+  .offers {
+    padding: 100px 0;
+  }
+
+  .offers h2 {
+    margin: 0 auto 40px;
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  .offers ul {
+    gap: 30px;
+  }
+
+  .offers a {
+    text-underline-offset: 4px;
+  }
+
+  .offers h3 {
+    margin: 0 0 11px;
+  }
+
+  .offers .main-offer {
+    position: relative;
+    -ms-grid-column: 2 span;
+    grid-column-start: 2 span;
+    -ms-grid-row: auto;
+    grid-row-start: auto;
+  }
+
   .promo {
     background-image: conic-gradient(from 139.4deg at 20.7% 35.74%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
   }
@@ -2389,6 +2614,18 @@ button,
   }
 }
 
+@media (max-width: 1199px) and (max-width: 767px) {
+  .main-offer::after {
+    display: none;
+  }
+}
+
+@media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 1199px), (max-width: 1199px) and (-o-min-device-pixel-ratio: 3/2) and (max-width: 1199px), (max-width: 1199px) and (min-resolution: 144dpi) and (max-width: 1199px), (max-width: 1199px) and (min-resolution: 1.5dppx) and (max-width: 1199px) {
+  .main-offer::after {
+    background-image: url("../img/decoration/sales-tablet@2x.jpg");
+  }
+}
+
 @media (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 1199px), (-o-min-device-pixel-ratio: 3/2) and (max-width: 1199px), (min-resolution: 144dpi) and (max-width: 1199px), (min-resolution: 1.5dppx) and (max-width: 1199px) {
   .promo .container {
     background-image: url("../img/decoration/promo-tablet@2x.png");
@@ -2475,7 +2712,7 @@ button,
   }
 
   .features {
-    padding: 67px 0 65px;
+    padding: 67px 0 63px;
   }
 
   .features .container {
@@ -2618,6 +2855,38 @@ button,
     height: 15px;
   }
 
+  .main-offer div {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 34px 46px 344px 45px;
+  }
+
+  .main-offer div::after {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 299px;
+    background-image: url("../img/decoration/sales-tablet@1x.jpg");
+  }
+
+  .main-offer .main-offer__title {
+    line-height: 38px;
+  }
+
+  .main-offer .main-offer__description {
+    padding: 0;
+  }
+
+  .main-offer .main-offer__link {
+    margin: 20px 0 0;
+  }
+
   .modal__wrapper {
     padding: 60px 16px;
   }
@@ -2629,6 +2898,46 @@ button,
 
   .modal--fit-content .modal__content {
     width: 100%;
+  }
+
+  .offers {
+    padding: 70px 0;
+  }
+
+  .offers h2 {
+    margin: 0 auto 42px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .offers ul {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
+  }
+
+  .offers li {
+    padding: 35px 35px 42px 32px;
+  }
+
+  .offers a {
+    margin: auto auto 0;
+  }
+
+  .offers h3 {
+    text-align: center;
+  }
+
+  .offers p {
+    padding: 0 25px;
+    text-align: center;
+  }
+
+  .offers .main-offer {
+    -ms-grid-column: auto;
+    grid-column-start: auto;
+    min-height: 598px;
   }
 
   .promo {
@@ -2770,6 +3079,10 @@ button,
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 767px), (-o-min-device-pixel-ratio: 3/2) and (max-width: 767px), (min-resolution: 144dpi) and (max-width: 767px), (min-resolution: 1.5dppx) and (max-width: 767px) {
+  .main-offer div::after {
+    background-image: url("../img/decoration/sales-tablet@2x.jpg");
+  }
+
   .rates .container::after {
     background-image: none;
   }
@@ -2797,6 +3110,10 @@ button,
 
   .gym button::before {
     background-image: url("../img/decoration/round@2x.png");
+  }
+
+  .main-offer div::after {
+    background-image: url("../img/decoration/sales@2x.jpg");
   }
 
   .promo .container {
