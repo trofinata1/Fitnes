@@ -1047,6 +1047,13 @@ button,
   cursor: pointer;
 }
 
+.coaches .coaches__swiper {
+  position: relative;
+  width: 1160px;
+  height: 294px;
+  overflow: hidden;
+}
+
 .coaches-info ul {
   position: relative;
   margin: 39px 0 0 0;
@@ -2025,6 +2032,15 @@ button,
   margin: 5px 0 4px;
 }
 
+.reviews {
+  padding: 0 0 120px;
+}
+
+.reviews .container {
+  position: relative;
+  width: 672px;
+}
+
 .reviews h2 {
   margin: 0 0 62px;
   font-family: "BebasNeue", "Arial", sans-serif;
@@ -2034,10 +2050,68 @@ button,
   text-align: center;
 }
 
-.reviews li {
-  background-color: #1c3374;
+.reviews ul {
+  margin: 0;
+  padding: 0;
   -webkit-box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
   box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
+}
+
+.reviews li {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80px auto;
+  grid-template-columns: 80px auto;
+  gap: 28px;
+  padding: 62px;
+  color: #ffffff;
+  background-color: #1c3374;
+}
+
+.reviews h3 {
+  margin: 0 0 25px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.reviews p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.reviews button {
+  position: absolute;
+  bottom: 103px;
+  width: 16px;
+  height: 32px;
+  padding: 0;
+  background-color: transparent;
+  background-image: url("../img/decoration/arrow@1x.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+}
+
+.reviews .reviews__button--prev {
+  left: -10px;
+}
+
+.reviews .reviews__button--next {
+  right: -10px;
+}
+
+.reviews img {
+  border-radius: 50%;
+}
+
+.reviews .reviews__swiper {
+  width: 660px;
+  height: 342px;
+  margin: 0 auto;
+  padding: 50px;
 }
 
 .social-list a {
@@ -2056,13 +2130,6 @@ button,
   color: #ffffff;
 }
 
-.swiper {
-  position: relative;
-  width: 1160px;
-  height: 294px;
-  overflow: hidden;
-}
-
 .swiper-button--next {
   right: -56px;
   -webkit-transform: rotate(180deg);
@@ -2074,9 +2141,9 @@ button,
   left: -56px;
 }
 
-.swiper-reviews {
-  width: 560px;
-  height: 242px;
+.swiper-button-disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .tabs-btn.is-active {
@@ -2202,7 +2269,7 @@ button,
     width: 1100px;
   }
 
-  .swiper {
+  .coaches .coaches__swiper {
     width: 1100px;
   }
 }
@@ -2237,6 +2304,11 @@ button,
 
   .coaches h3 {
     bottom: 23px;
+  }
+
+  .coaches .coaches__swiper {
+    width: 866px;
+    margin: 0 auto;
   }
 
   .features {
@@ -2600,11 +2672,6 @@ button,
     margin: -3px 0 3px;
   }
 
-  .swiper {
-    width: 866px;
-    margin: 0 auto;
-  }
-
   .swiper-button--next {
     right: 45px;
   }
@@ -2633,6 +2700,10 @@ button,
 }
 
 @media (max-width: 1023px) {
+  .coaches .coaches__swiper {
+    width: 566px;
+  }
+
   .gym .gym__video {
     bottom: -83px;
     width: 266px;
@@ -2647,10 +2718,6 @@ button,
 
   .promo .container {
     background-position: center right 45px;
-  }
-
-  .swiper {
-    width: 566px;
   }
 }
 
@@ -3093,7 +3160,7 @@ button,
 }
 
 @media (max-width: 639px) {
-  .swiper {
+  .coaches .coaches__swiper {
     width: 226px;
     height: 274px;
   }

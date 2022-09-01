@@ -1,4 +1,12 @@
 .reviews {
+  padding: 0 0 120px;
+
+  .container {
+    position: relative;
+
+    width: 672px;
+  }
+
   h2 {
     margin: 0 0 62px;
 
@@ -9,9 +17,76 @@
     text-align: center;
   }
 
+  ul {
+    margin: 0;
+    padding: 0;
+
+    box-shadow: $shadow-resolution-blue;
+  }
+
   li {
+    display: grid;
+    grid-template-columns: 80px auto;
+    gap: 28px;
+
+    padding: 62px;
+
+    color: $color-default-white;
+
     background-color: $color-resolution-blue;
-    
-    box-shadow: $shadow-black-forest;
+  }
+
+  h3 {
+    margin: 0 0 25px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  p {
+    margin: 0;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  button {
+    position: absolute;
+    bottom: 103px;
+
+    width: 16px;
+    height: 32px;
+    padding: 0;
+
+    background-color: transparent;
+    background-image: url("../img/decoration/arrow@1x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+
+    cursor: pointer;
+  }
+
+  .reviews__button {
+    &--prev {
+      left: -10px;
+    }
+
+    &--next {
+      right: -10px;
+    }
+  }
+
+  img {
+    border-radius: 50%;
+  }
+
+  .reviews__swiper {
+    width: 660px;
+    height: 342px;
+
+    margin: 0 auto;
+    padding: 50px;
   }
 }

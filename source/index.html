@@ -223,8 +223,8 @@
         <section class="coaches">
           <div class="container">
             <h2>Тренеры</h2>
-            <div class="swiper">
-              <ul class="swiper-wrapper">
+            <div class="swiper coaches__swiper">
+              <ul class="swiper-wrapper coaches__swiper-wrapper">
                 <li class="swiper-slide">
                   <picture>
                     <source type="image/webp" srcset="img/content/photo1@1x.webp, img/content/photo1@2x.webp 2x">
@@ -348,7 +348,7 @@
                   <picture>
                     <source type="image/webp" srcset="img/content/photo4@1x.webp, img/content/photo4@2x.webp 2x">
                     <!-- 1х: 260px; 2x: 520px -->
-                    <img src="img/content/photo4@1x.jpg" srcset="img/content/photo4@2x.jpg 2x" width="260" height="294" alt="Фото девушки с длинными темными волосами, и темными глазами.">
+                    <img src="img/content/photo4@1x.jpg" srcset="img/content/photo4@2x.jpg 2x" width="80" height="80" alt="Фото девушки с длинными темными волосами, и темными глазами.">
                   </picture>
                   <h3>Мария Кетова</h3>
                   <div class="coaches-info">
@@ -444,13 +444,34 @@
         <section class="reviews">
           <div class="container">
             <h2>Отзывы</h2>
-            <div class="swiper swiper-reviews">
-              <ul class="swiper-wrapper">
-                <li class="swiper-slide">1</li>
-                <li class="swiper-slide">2</li>
+            <div class="swiper reviews__swiper">
+              <ul class="swiper-wrapper reviews__swiper-wrapper">
+                <li class="swiper-slide reviews__swiper-slide">
+                  <picture>
+                    <source type="image/webp" srcset="img/content/review@1x.webp, img/content/review@2x.webp 2x">
+                    <!-- 1х: 80px; 2x: 160px -->
+                    <img src="img/content/review@1x.png" srcset="img/content/review@2x.png 2x" width="80" height="80" alt="Фото девушки с убранными наверх темными волосами, на сером фоне.">
+                  </picture>
+                  <div>
+                    <h3>Анна Орлова</h3>
+                    <p>&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
+                  </div>
+                </li>
+                <li class="swiper-slide reviews__swiper-slide">
+                  <picture>
+                    <source type="image/webp" srcset="img/content/review2@1x.webp, img/content/review2@2x.webp 2x">
+                    <!-- 1х: 80px; 2x: 160px -->
+                    <img src="img/content/review2@1x.png" srcset="img/content/review2@2x.png 2x" width="80" height="80" alt="Фото мужчины в вязаной кофте, на черном фоне.">
+                  </picture>
+                  <div>
+                    <h3>Алексей Тетерников</h3>
+                    <p>Замечательный подбор тренерского состава. Небольшие группы , разные направления Рекомендую!</p>
+                  </div>
+                </li>
               </ul>
-              <button class="swiper-button swiper-button--prev" type="button" aria-label="Перейти на прошлый слайд."></button>
-              <button class="swiper-button swiper-button--next" type="button" aria-label="Перейти на следующий слайд."></button>
+              <button class="swiper-button swiper-button--prev reviews__button reviews__button--prev" type="button" aria-label="Перейти на прошлый слайд."></button>
+              <button class="swiper-button swiper-button--next reviews__button reviews__button--next" type="button" aria-label="Перейти на следующий слайд."></button>
+            </div>
           </div>
         </section>
       </main>

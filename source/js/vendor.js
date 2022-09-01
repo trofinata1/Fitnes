@@ -3,11 +3,11 @@ import Swiper from './vendor/swiper';
 
 window.addEventListener('load', () => {
 
-  const slider = document.querySelector('.swiper');
-  const sliderReviews = document.querySelector('.swiper-reviews');
+  const sliderCoaches = document.querySelector('.coaches__swiper');
+  const sliderReviews = document.querySelector('.reviews__swiper');
 
-  if (slider) {
-    const swiper = new Swiper('.swiper', {
+  if (sliderCoaches) {
+    const swiperCoaches = new Swiper('.coaches__swiper', {
       loop: 'true',
       navigation: {
         nextEl: '.swiper-button--next',
@@ -44,13 +44,19 @@ window.addEventListener('load', () => {
   }
 
   if (sliderReviews) {
-    const swiperReviews = new Swiper('.swiper-reviews', {
-      loop: 'false',
+    const swiperReviews = new Swiper('.reviews__swiper', {
       navigation: {
         nextEl: '.swiper-button--next',
         prevEl: '.swiper-button--prev',
       },
+      loopedSlides: '0',
       slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 50,
+      effect: 'flip',
+      flipEffect: {
+        slideShadows: false,
+      },
     });
   }
 });
