@@ -24,10 +24,10 @@
       left: 15px;
     }
   }
-}
 
-.swiper-button-disabled {
-  opacity: 0.5;
+  &:disabled {
+    opacity: 0.5;
 
-  pointer-events: none;
+    pointer-events: none;
+  }
 }

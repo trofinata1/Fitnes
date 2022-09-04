@@ -52,11 +52,6 @@ window.addEventListener('load', () => {
       loopedSlides: '0',
       slidesPerView: 1,
       slidesPerGroup: 1,
-      spaceBetween: 50,
-      effect: 'flip',
-      flipEffect: {
-        slideShadows: false,
-      },
     });
   }
 });

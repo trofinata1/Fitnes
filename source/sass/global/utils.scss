@@ -96,6 +96,11 @@
   }
 }
 
+.sections-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 @keyframes fadeInFromNone {
   0% {
     display: none;

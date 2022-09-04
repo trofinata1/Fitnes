@@ -36,6 +36,8 @@ $color-spindle:                     #b6bdcc;
 $color-persian-blue:                #2e35ac;
 $color-resolution-blue:             #1c3374;
 $color-resolution-blue-transparent: rgba($color-resolution-blue, 0.2);
+$color-light-state-grey:            #74819c;
+$color-black-russian:               #030a1a;
 
 // Gradient
 
@@ -58,6 +60,7 @@ $border-white-medium:                2px solid $color-default-white;
 $border-white:                       1px solid $color-default-white;
 $border-blue:                        2px solid $color-sapphire;
 $border-grey:                        2px solid $color-grey-transparent;
+$border-light-state-grey:            1px solid $color-light-state-grey;
 
 // Shadow
 $shadow-default:                     inset 0 0 0 100vw $color-default-white;

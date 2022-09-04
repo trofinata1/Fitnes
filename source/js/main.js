@@ -2,6 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {playVideo} from './modules/video';
 import {onTabsClick} from './modules/tabs';
+import {interactWithForm} from './modules/form.js';
 
 // ---------------------------------
 
@@ -16,6 +17,10 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
   playVideo();
   onTabsClick();
+
+  if (document.querySelector('.form')) {
+    interactWithForm();
+  }
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
