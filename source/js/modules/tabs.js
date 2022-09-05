@@ -20,4 +20,3 @@ export const onTabsClick = () => {
     document.querySelector(`[data-tabs-target="${path}"]`).classList.add('is-active');
   };
 };
-

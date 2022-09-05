@@ -259,6 +259,8 @@
   iframe {
     position: relative;
 
+    border: none;
+
     @include vp-1199 {
       width: 466px;
       height: 267px;

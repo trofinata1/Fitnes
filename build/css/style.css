@@ -385,7 +385,7 @@ template {
 }
 
 @font-face {
-  font-family: 'swiper-icons';
+  font-family: "swiper-icons";
   src: url("data:application/font-woff;charset=utf-8;base64, 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") format("woff");
   font-weight: 400;
   font-style: normal;
@@ -432,8 +432,8 @@ template {
 
 .swiper-container-android .swiper-slide,
 .swiper-wrapper {
-  -webkit-transform: translate3d(0px, 0, 0);
-  transform: translate3d(0px, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .swiper-container-multirow > .swiper-wrapper {
@@ -628,6 +628,7 @@ html {
   line-height: 24px;
   font-family: "Placeholder", "Arial", sans-serif;
   color: #000000;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -895,6 +896,7 @@ button,
   line-height: 14px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  vertical-align: middle;
   color: #ffffff;
   background-color: transparent;
   border: 4px solid #ffffff;
@@ -1390,7 +1392,7 @@ button,
 
 .footer .social-list {
   max-width: 100px;
-  margin: 0 0 0 auto;
+  margin: 0 5px 0 auto;
 }
 
 .footer .footer__logo {
@@ -1510,6 +1512,7 @@ button,
 
 .gym iframe {
   position: relative;
+  border: none;
 }
 
 .header {
@@ -1994,10 +1997,19 @@ button,
   max-width: 1160px;
   margin: 0 auto;
   padding: 163px 0 94px;
+}
+
+.promo .container::after {
+  position: absolute;
+  top: 51px;
+  left: 460px;
+  width: 500px;
+  height: 556px;
+  background-color: #003d85;
   background-image: url("../img/decoration/promo@1x.png");
   background-repeat: no-repeat;
   background-size: auto;
-  background-position: center right 203px;
+  content: "";
 }
 
 .promo div {
@@ -2386,26 +2398,25 @@ button,
 
 .reviews button {
   position: absolute;
-  top: 50%;
-  width: 16px;
-  height: 32px;
-  margin: -8px 0 0;
-  padding: 0;
+  top: 136px;
+  width: 36px;
+  height: 52px;
+  padding: 10px;
   background-color: transparent;
   background-image: url("../img/decoration/arrow@1x.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-position: center;
   border: none;
   cursor: pointer;
   z-index: 1;
 }
 
 .reviews .reviews__button--prev {
-  left: 245px;
+  left: 235px;
 }
 
 .reviews .reviews__button--next {
-  right: 245px;
+  right: 235px;
 }
 
 .reviews img {
@@ -2448,6 +2459,7 @@ button,
   box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
   overflow-y: scroll;
   overflow-x: hidden;
+  scrollbar-width: none;
 }
 
 .reviews-card .reviews-card__information::-webkit-scrollbar {
@@ -2935,7 +2947,6 @@ button,
 
   .header svg {
     width: 82px;
-    height: 17px;
   }
 
   .main-offer div {
@@ -2957,6 +2968,7 @@ button,
     right: 0;
     width: 59%;
     height: 100%;
+    background-color: #003d85;
     background-image: url("../img/decoration/sales-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -3025,8 +3037,15 @@ button,
 
   .promo .container {
     padding: 133px 45px 106px;
+  }
+
+  .promo .container::after {
+    top: 82px;
+    right: 45px;
+    left: auto;
+    width: 324px;
+    height: 390px;
     background-image: url("../img/decoration/promo-tablet@1x.png");
-    background-position: center right 30%;
   }
 
   .promo div {
@@ -3172,11 +3191,11 @@ button,
   }
 
   .reviews .reviews__button--prev {
-    left: 0;
+    left: -10px;
   }
 
   .reviews .reviews__button--next {
-    right: 0;
+    right: -10px;
   }
 
   .reviews-card .reviews-card__information {
@@ -3206,7 +3225,7 @@ button,
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 1199px), (-o-min-device-pixel-ratio: 3/2) and (max-width: 1199px), (min-resolution: 144dpi) and (max-width: 1199px), (min-resolution: 1.5dppx) and (max-width: 1199px) {
-  .promo .container {
+  .promo .container::after {
     background-image: url("../img/decoration/promo-tablet@2x.png");
   }
 }
@@ -3234,10 +3253,6 @@ button,
 
   .order .container {
     margin: 0 auto 0 131px;
-  }
-
-  .promo .container {
-    background-position: center right 45px;
   }
 }
 
@@ -3299,7 +3314,7 @@ button,
   }
 
   .contacts {
-    padding: 70px 0 48px;
+    padding: 70px 0 44px;
   }
 
   .contacts .container {
@@ -3310,6 +3325,11 @@ button,
   .contacts h2 {
     font-size: 32px;
     line-height: 32px;
+  }
+
+  .contacts p,
+  .contacts a {
+    margin: 5px 0 20px;
   }
 
   .contacts li:not(:nth-child(2n))::after {
@@ -3621,7 +3641,10 @@ button,
   .promo .container {
     width: 100%;
     padding: 110px 15px 80px;
-    background-image: none;
+  }
+
+  .promo .container::after {
+    display: none;
   }
 
   .promo div {
@@ -3760,9 +3783,9 @@ button,
   }
 
   .reviews button {
+    top: 196px;
     width: 10px;
     height: 19px;
-    margin: -10px 0 0;
   }
 
   .reviews .reviews__button--prev {
@@ -3809,6 +3832,7 @@ button,
   }
 
   .tabs-btn.is-active::after {
+    right: -7px;
     bottom: -2px;
   }
 
@@ -3865,7 +3889,7 @@ button,
     background-image: url("../img/decoration/sales@2x.jpg");
   }
 
-  .promo .container {
+  .promo .container::after {
     background-image: url("../img/decoration/promo@2x.png");
   }
 

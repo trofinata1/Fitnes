@@ -40,7 +40,6 @@ window.addEventListener('load', () => {
         },
       },
     });
-
   }
 
   if (sliderReviews) {
@@ -55,4 +54,3 @@ window.addEventListener('load', () => {
     });
   }
 });
-

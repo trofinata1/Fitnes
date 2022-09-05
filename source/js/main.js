@@ -2,7 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {playVideo} from './modules/video';
 import {onTabsClick} from './modules/tabs';
-import {interactWithForm} from './modules/form.js';
+import {interactWithForm} from './modules/form';
 
 // ---------------------------------
 

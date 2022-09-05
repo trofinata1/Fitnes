@@ -16,6 +16,7 @@
       content: "";
 
       @include vp-767 {
+        right: -7px;
         bottom: -2px;
       }
     }
