@@ -47,6 +47,7 @@
   }
 
   h2 {
+    max-width: 355px;
     margin: 45px 0 10px;
 
     font-family: $ff-bebas-neue;
@@ -58,7 +59,7 @@
     overflow-wrap: break-word;
 
     @include vp-1199 {
-      margin: 45px 0 7px;
+      margin: 45px auto 7px;
 
       font-size: 42px;
       line-height: 42px;

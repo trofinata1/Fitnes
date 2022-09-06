@@ -1064,6 +1064,14 @@ button,
   overflow: hidden;
 }
 
+.coaches .coaches__button--prev {
+  left: -55px;
+}
+
+.coaches .coaches__button--next {
+  right: -55px;
+}
+
 .coaches-info ul {
   position: relative;
   margin: 39px 0 0 0;
@@ -1136,6 +1144,7 @@ button,
   display: block;
   margin: 0 0 4px 0;
   font-weight: 700;
+  word-break: break-all;
 }
 
 .contacts p,
@@ -1144,6 +1153,7 @@ button,
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
+  word-break: break-all;
   color: #102654;
 }
 
@@ -1152,38 +1162,39 @@ button,
 }
 
 .contacts ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+  grid-template-columns: auto auto;
+  -ms-grid-rows: auto auto;
+  grid-template-rows: auto auto;
+  -webkit-column-gap: 120px;
+  -moz-column-gap: 120px;
+  column-gap: 120px;
+  width: 405px;
   margin: 0;
   padding: 0 0 0 5px;
   list-style-type: none;
 }
 
-.contacts li {
-  min-width: 165px;
-}
-
-.contacts li:not(:nth-child(2n)) {
-  position: relative;
-  margin: 0 120px 0 0;
-}
-
-.contacts li:not(:nth-child(2n))::after {
+.contacts ul::after {
   position: absolute;
   top: 6px;
-  right: -60px;
-  background-color: #74819c;
+  left: 235px;
   width: 1px;
   height: calc(100% - 30px);
+  background-color: #74819c;
   content: "";
 }
 
 .features {
   padding: 117px 0 35px;
   background-color: #f8f9fc;
+}
+
+.features .container {
+  position: relative;
 }
 
 .features h2 {
@@ -1205,11 +1216,11 @@ button,
 .features ul {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 240px 1fr;
-  grid-template-columns: 1fr 240px 1fr;
-  -webkit-column-gap: 60px;
-  -moz-column-gap: 60px;
-  column-gap: 60px;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -webkit-column-gap: 360px;
+  -moz-column-gap: 360px;
+  column-gap: 360px;
   row-gap: 75px;
   width: 1040px;
   margin: 0 auto;
@@ -1246,18 +1257,12 @@ button,
 }
 
 .features .features__center-item {
-  -ms-grid-column: 2;
-  grid-column-start: 2;
-  -ms-grid-column-span: 1;
-  grid-column-end: 3;
-  -ms-grid-row: 1;
-  grid-row-start: 1;
-  -ms-grid-row-span: 2;
-  grid-row-end: 3;
-  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
   width: 240px;
-  height: 305px;
-  margin: 10px 0 0;
+  min-height: 305px;
+  margin: 10px 0 0 -120px;
   padding: 50px 33px 49px 29px;
   font-weight: 700;
   font-size: 26px;
@@ -1313,7 +1318,7 @@ button,
 
 .features-card span {
   position: absolute;
-  bottom: 0;
+  top: 85px;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
@@ -1415,6 +1420,7 @@ button,
 }
 
 .gym h2 {
+  max-width: 355px;
   margin: 45px 0 10px;
   font-family: "BebasNeue", "Arial", sans-serif;
   font-weight: 700;
@@ -2019,6 +2025,7 @@ button,
 }
 
 .promo p {
+  max-width: 397px;
   margin: 0 0 5px;
   font-family: "BebasNeue", "Arial", sans-serif;
   font-weight: 400;
@@ -2026,10 +2033,12 @@ button,
   line-height: 59px;
   letter-spacing: 0.03em;
   text-align: right;
+  word-break: break-all;
   color: #ffffff;
 }
 
 .promo h1 {
+  max-width: 397px;
   margin: 0 0 57px;
   font-family: "BebasNeue", "Arial", sans-serif;
   font-weight: 700;
@@ -2037,14 +2046,16 @@ button,
   line-height: 109px;
   letter-spacing: 0.03em;
   text-align: right;
+  word-break: break-all;
   color: #ffffff;
 }
 
 .promo ul {
   position: absolute;
-  bottom: 83px;
+  top: 193px;
   left: 20px;
   max-width: 113px;
+  max-height: 235px;
   margin: 0;
   padding: 0;
   font-family: "RobotoCondensed", "Arial", sans-serif;
@@ -2054,15 +2065,27 @@ button,
   text-align: right;
   color: #ffffff;
   list-style-type: none;
+  overflow: hidden;
 }
 
 .promo .social-list {
-  top: 465px;
-  left: 99%;
+  bottom: 45px;
+  left: 98%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
+  max-height: 150px;
   margin: auto 0 0 0;
+  overflow: inherit;
 }
 
 .promo a {
@@ -2473,6 +2496,10 @@ button,
   box-shadow: inset 1px 1px 10px #ffffff;
 }
 
+.social-list li {
+  margin: 0 0 0 10px;
+}
+
 .social-list a {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -2500,6 +2527,7 @@ button,
 .social-list--row li {
   width: 25px;
   height: 25px;
+  margin: 0;
   background-color: #ffffff;
   border-radius: 50%;
 }
@@ -2520,14 +2548,9 @@ button,
 }
 
 .swiper-button--next {
-  right: -56px;
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
-}
-
-.swiper-button--prev {
-  left: -56px;
 }
 
 .swiper-button:disabled {
@@ -2681,6 +2704,14 @@ button,
   .coaches .coaches__swiper {
     width: 1100px;
   }
+
+  .coaches .coaches__button--prev {
+    left: 44px;
+  }
+
+  .coaches .coaches__button--next {
+    right: 44px;
+  }
 }
 
 @media (max-width: 1199px) {
@@ -2750,19 +2781,15 @@ button,
   }
 
   .contacts ul {
+    -webkit-column-gap: 73px;
+    -moz-column-gap: 73px;
+    column-gap: 73px;
+    width: 480px;
     padding: 0;
   }
 
-  .contacts li {
-    min-width: 218px;
-  }
-
-  .contacts li:not(:nth-child(2n))::after {
-    right: -50px;
-  }
-
-  .contacts li:not(:nth-child(2n)) {
-    margin: 0 95px 0 0;
+  .contacts ul::after {
+    left: 266px;
   }
 
   .features {
@@ -2776,12 +2803,14 @@ button,
   }
 
   .features ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    row-gap: 34px;
+    -ms-grid-columns: auto auto;
+    grid-template-columns: auto auto;
+    -ms-grid-rows: auto auto auto;
+    grid-template-rows: auto auto auto;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+    row-gap: 25px;
     width: 100%;
   }
 
@@ -2800,19 +2829,24 @@ button,
     display: none;
   }
 
-  .features li:nth-child(4),
-  .features li:nth-child(5) {
-    margin: 10px 0 0;
-  }
-
   .features .features__center-item {
-    width: 640px;
-    height: 239px;
-    margin: -10px auto 0;
-    padding: 31px 112px 30px 110px;
+    position: static;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-column: 1;
+    grid-column-start: 1;
+    -ms-grid-column-span: 2;
+    grid-column-end: 3;
+    -ms-grid-row: 2;
+    grid-row-start: 2;
+    -ms-grid-row-span: 1;
+    grid-row-end: 3;
+    width: 442px;
+    min-height: 239px;
+    margin: 0 auto 17px;
+    padding: 31px 112px 39px 110px;
     font-size: 22px;
     line-height: 33px;
-    overflow-y: scroll;
   }
 
   .features .features__center-item-numbers {
@@ -2828,6 +2862,10 @@ button,
     line-height: 95px;
   }
 
+  .features-card span {
+    top: 75px;
+  }
+
   .features-card .features-card__info--with-big-padding {
     padding: 0;
   }
@@ -2837,7 +2875,7 @@ button,
   }
 
   .features-card b {
-    margin: 0;
+    margin: 0 0 1px;
     font-size: 20px;
     line-height: 30px;
   }
@@ -2885,7 +2923,7 @@ button,
   }
 
   .gym h2 {
-    margin: 45px 0 7px;
+    margin: 45px auto 7px;
     font-size: 42px;
     line-height: 42px;
   }
@@ -3098,8 +3136,20 @@ button,
   }
 
   .rates .tabs__btns {
+    position: relative;
     min-width: 334px;
     margin: 0 auto 44px;
+    border: none;
+  }
+
+  .rates .tabs__btns::after {
+    position: absolute;
+    right: 5px;
+    bottom: -2px;
+    left: 0;
+    height: 2px;
+    background-color: rgba(120, 120, 120, 0.2);
+    content: "";
   }
 
   .rates button {
@@ -3201,14 +3251,6 @@ button,
   .reviews-card .reviews-card__information {
     width: 566px;
     padding: 55px 55px 55px 65px;
-  }
-
-  .swiper-button--next {
-    right: 45px;
-  }
-
-  .swiper-button--prev {
-    left: 45px;
   }
 }
 
@@ -3332,10 +3374,6 @@ button,
     margin: 5px 0 20px;
   }
 
-  .contacts li:not(:nth-child(2n))::after {
-    display: none;
-  }
-
   .features {
     padding: 67px 0 63px;
   }
@@ -3371,11 +3409,6 @@ button,
 
   .features li:not(.features__center-item) {
     padding: 0 46px;
-  }
-
-  .features li:nth-child(4),
-  .features li:nth-child(5) {
-    margin: 0;
   }
 
   .features .features__center-item {
@@ -3821,14 +3854,6 @@ button,
     width: 226px;
     height: 335px;
     padding: 31px 10px 30px 18px;
-  }
-
-  .swiper-button--next {
-    right: 15px;
-  }
-
-  .swiper-button--prev {
-    left: 15px;
   }
 
   .tabs-btn.is-active::after {

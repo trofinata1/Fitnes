@@ -106,8 +106,25 @@
     list-style-type: none;
 
     @include vp-1199 {
+      position: relative;
+
       min-width: 334px;
       margin: 0 auto 44px;
+
+      border: none;
+
+      &::after {
+        position: absolute;
+        right: 5px;
+        bottom: -2px;
+        left: 0;
+
+        height: 2px;
+
+        background-color: $color-grey-transparent;
+
+        content: "";
+      }
     }
 
     @include vp-767 {

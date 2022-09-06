@@ -12,6 +12,8 @@
   }
 
   .container {
+    position: relative;
+
     @include vp-767 {
       padding: 0;
     }
@@ -51,8 +53,8 @@
 
   ul {
     display: grid;
-    grid-template-columns: 1fr 240px 1fr;
-    column-gap: 60px;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 360px;
     row-gap: 75px;
 
     width: 1040px;
@@ -63,9 +65,10 @@
     list-style-type: none;
 
     @include vp-1199 {
-      display: flex;
-      flex-wrap: wrap;
-      row-gap: 34px;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto auto;
+      column-gap: 30px;
+      row-gap: 25px;
 
       width: 100%;
     }
@@ -137,30 +140,16 @@
         }
       }
     }
-
-    &:nth-child(4),
-    &:nth-child(5) {
-      @include vp-1199 {
-        margin: 10px 0 0;
-      }
-
-      @include vp-767 {
-        margin: 0;
-      }
-    }
   }
 
   .features__center-item {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
-
-    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
 
     width: 240px;
-    height: 305px;
-    margin: 10px 0 0;
+    min-height: 305px;
+    margin: 10px 0 0 -120px;
     padding: 50px 33px 49px 29px;
 
     font-weight: 700;
@@ -172,16 +161,23 @@
     background-color: $color-resolution-blue;
 
     @include vp-1199 {
-      width: 640px;
-      height: 239px;
+      position: static;
 
-      margin: -10px auto 0;
-      padding: 31px 112px 30px 110px;
+      grid-template-columns: 1fr;
+
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+
+      width: 442px;
+      min-height: 239px;
+
+      margin: 0 auto 17px;
+      padding: 31px 112px 39px 110px;
 
       font-size: 22px;
       line-height: 33px;
-
-      overflow-y: scroll;
     }
 
     @include vp-839 {

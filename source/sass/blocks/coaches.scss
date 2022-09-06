@@ -206,4 +206,22 @@
       height: 274px;
     }
   }
+
+  .coaches__button {
+    &--prev {
+      left: -55px;
+
+      @include vp-1279 {
+        left: 44px;
+      }
+    }
+
+    &--next {
+      right: -55px;
+
+      @include vp-1279 {
+        right: 44px;
+      }
+    }
+  }
 }
