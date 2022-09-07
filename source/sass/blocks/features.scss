@@ -74,7 +74,9 @@
     }
 
     @include vp-767 {
-      gap: 52px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 50px;
 
       width: 100%;
     }
@@ -88,9 +90,12 @@
     column-gap: 33px;
 
     @include vp-1199 {
+      grid-template-columns: auto min(407px);
       column-gap: 30px;
+    }
 
-      width: 46%;
+    @include vp-1140 {
+      grid-template-columns: repeat(2, auto);
     }
 
     @include vp-839 {
@@ -186,6 +191,7 @@
 
     @include vp-767 {
       width: 100%;
+      margin: -7px 0 4px;
       padding: 35px 55px 15px;
     }
 
@@ -233,5 +239,9 @@
     @include vp-767 {
       margin: 8px 0 0 -3px;
     }
+  }
+
+  .tablet-shown {
+    display: block;
   }
 }

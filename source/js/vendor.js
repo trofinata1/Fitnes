@@ -23,12 +23,12 @@ window.addEventListener('load', () => {
           slidesPerGroup: 1,
           spaceBetween: 30,
         },
-        768: {
+        1023: {
           slidesPerView: 2,
           slidesPerGroup: 1,
           spaceBetween: 30,
         },
-        1023: {
+        1050: {
           slidesPerView: 3,
           slidesPerGroup: 1,
           spaceBetween: 30,

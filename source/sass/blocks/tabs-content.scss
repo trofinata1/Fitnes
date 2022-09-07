@@ -1,12 +1,15 @@
 .tabs-content {
-  display: none;
-  opacity: 0;
+  display: grid;
+
+  &.with-js {
+    display: none;
+  }
 
   &.is-active {
     display: grid;
-    opacity: 1;
 
     animation: fadeInFromNone 1s ease-in-out;
+    opacity: 1;
   }
 
   li {
@@ -18,7 +21,13 @@
 
     background-color: $color-default-white;
 
+    @include vp-1199 {
+      width: 442px;
+      margin: 0 auto;
+    }
+
     @include vp-767 {
+      width: 100%;
       padding: 52px 42px 50px;
     }
 

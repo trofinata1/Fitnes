@@ -14,6 +14,7 @@
   background-color: transparent;
   border: $border-default-white;
   cursor: pointer;
+  user-select: none;
 
   transition: opacity $trans-default;
 

@@ -1,8 +1,10 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {playVideo} from './modules/video';
-import {onTabsClick} from './modules/tabs';
+import {onTabsClick, addClassToTab} from './modules/tabs';
 import {interactWithForm} from './modules/form';
+import {getCoachesSlider} from './modules/coaches';
+import {getReviewsSlider} from './modules/reviews';
 
 // ---------------------------------
 
@@ -16,7 +18,11 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
   playVideo();
+  addClassToTab();
   onTabsClick();
+
+  getCoachesSlider();
+  getReviewsSlider();
 
   if (document.querySelector('.form')) {
     interactWithForm();

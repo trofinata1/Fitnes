@@ -1,14 +1,3 @@
-// @font-face {
-//   font-style: normal;
-//   font-weight: 400;
-//   font-family: "Rouble";
-
-//   font-display: swap;
-//   src:
-//     url("../fonts/rouble.woff2") format("woff2"),
-//     url("../fonts/rouble.woff") format("woff");
-// }
-
 @font-face {
   font-style: normal;
   font-weight: 700;
@@ -16,8 +5,8 @@
 
   font-display: swap;
   src:
-    url("../fonts/BebasNeueBold.woff2") format("woff2"),
-    url("../fonts/BebasNeueBold.woff") format("woff");
+    url("../fonts/BebasNeue-Bold.woff2") format("woff2"),
+    url("../fonts/BebasNeue-Bold.woff") format("woff");
 }
 
 @font-face {
@@ -27,8 +16,8 @@
 
   font-display: swap;
   src:
-    url("../fonts/BebasNeueRegular.woff2") format("woff2"),
-    url("../fonts/BebasNeueRegular.woff") format("woff");
+    url("../fonts/BebasNeue-Regular.woff2") format("woff2"),
+    url("../fonts/BebasNeue-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -49,6 +38,17 @@
 
   font-display: swap;
   src:
-    url("../fonts/RobotoCondensed-Regular.woff2") format("woff2"),
-    url("../fonts/RobotoCondensed-Regular.woff") format("woff");
+    url("../fonts/Roboto-Condensed.woff2") format("woff2"),
+    url("../fonts/Roboto-Condensed.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "RobotoCondensed";
+
+  font-display: swap;
+  src:
+    url("../fonts/RobotoCondensed-Bold.woff2") format("woff2"),
+    url("../fonts/RobotoCondensed-Bold.woff") format("woff");
 }
