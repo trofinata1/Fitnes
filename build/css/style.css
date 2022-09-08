@@ -1364,10 +1364,12 @@ button,
 }
 
 .features-card .features-card__info--with-big-padding {
+  min-width: 108px;
   padding: 0 0 0 27px;
 }
 
 .features-card .features-card__info--with-padding {
+  min-width: 108px;
   padding: 0 0 0 21px;
 }
 
@@ -2298,6 +2300,7 @@ button,
   grid-row-start: 1;
   -ms-grid-row-span: 2;
   grid-row-end: 3;
+  min-width: 201px;
   margin: 0 45px 0 0;
   font-family: "BebasNeue", "Arial", sans-serif;
   font-size: 90px;
@@ -2316,6 +2319,7 @@ button,
   grid-row-start: 1;
   -ms-grid-row-span: 1;
   grid-row-end: 2;
+  min-width: 92px;
   word-break: break-all;
 }
 
@@ -2328,6 +2332,7 @@ button,
   grid-row-start: 2;
   -ms-grid-row-span: 1;
   grid-row-end: 3;
+  min-width: 92px;
   word-break: break-all;
 }
 
@@ -2506,6 +2511,7 @@ button,
   position: relative;
   width: 100%;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .reviews .reviews__photo {
@@ -2937,10 +2943,12 @@ button,
   }
 
   .features-card .features-card__info--with-big-padding {
+    min-width: 89px;
     padding: 0;
   }
 
   .features-card .features-card__info--with-padding {
+    min-width: 89px;
     padding: 0;
   }
 
@@ -3265,9 +3273,18 @@ button,
   }
 
   .request h2 {
+    min-width: 117px;
     margin: 0;
     font-size: 52px;
     line-height: 52px;
+  }
+
+  .request .request__date {
+    min-width: 56px;
+  }
+
+  .request .request__time {
+    min-width: 56px;
   }
 
   .request a {
@@ -3295,13 +3312,20 @@ button,
   }
 
   .request-data .request-data__title {
-    margin: 0;
     font-size: 12px;
     line-height: 14px;
   }
 
   .request-data .request-data__title--date {
-    margin: -3px 0 3px;
+    min-width: auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: -3px 0 5px;
+  }
+
+  .request-data .request-data__title--time {
+    margin: 0 0 4px;
   }
 
   .reviews h2 {
@@ -3918,6 +3942,14 @@ button,
 
   .request-data .request-data__title {
     line-height: 17px;
+  }
+
+  .request-data .request-data__title--date {
+    margin: -3px 0 2px;
+  }
+
+  .request-data .request-data__title--time {
+    margin: 0 0 1px;
   }
 
   .reviews .container {

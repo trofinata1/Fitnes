@@ -57,17 +57,21 @@
     }
 
     &--with-big-padding {
+      min-width: 108px;
       padding: 0 0 0 27px;
 
       @include vp-1199 {
+        min-width: 89px;
         padding: 0;
       }
     }
 
     &--with-padding {
+      min-width: 108px;
       padding: 0 0 0 21px;
 
       @include vp-1199 {
+        min-width: 89px;
         padding: 0;
       }
     }

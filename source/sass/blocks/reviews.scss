@@ -164,6 +164,8 @@
 
     margin: 0 auto;
 
+    overflow: hidden;
+
     @include vp-767 {
       height: 415px;
     }
