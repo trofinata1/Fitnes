@@ -1,3 +1,5 @@
+import {Swiper} from '../vendor/swiper.js';
+
 const sliderCoaches = document.querySelector('.coaches__swiper');
 const sliderReviews = document.querySelector('.reviews__swiper');
 
