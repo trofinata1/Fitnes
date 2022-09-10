@@ -142,8 +142,8 @@
 
   .gym__video {
     position: absolute;
+    top: 287px;
     right: 359px;
-    bottom: -115px;
 
     width: 364px;
     max-width: 364px;
@@ -153,6 +153,7 @@
     background-color: $color-cobalt;
 
     @include vp-1199 {
+      top: auto;
       bottom: -103px;
       left: 50%;
 

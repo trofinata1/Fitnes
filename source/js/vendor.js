@@ -18,18 +18,8 @@ window.addEventListener('load', () => {
           slidesPerView: 1,
           slidesPerGroup: 1,
         },
-        640: {
+        768: {
           slidesPerView: 2,
-          slidesPerGroup: 1,
-          spaceBetween: 30,
-        },
-        1023: {
-          slidesPerView: 2,
-          slidesPerGroup: 1,
-          spaceBetween: 30,
-        },
-        1050: {
-          slidesPerView: 3,
           slidesPerGroup: 1,
           spaceBetween: 30,
         },

@@ -100,12 +100,6 @@
   display: flex;
   flex-wrap: wrap;
 
-  margin: -12px 0 0;
-
-  @include vp-1199 {
-    margin: -32px 0 0;
-  }
-
   @include vp-767 {
     margin: 29px 0 0;
   }

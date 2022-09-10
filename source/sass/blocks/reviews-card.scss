@@ -7,16 +7,13 @@
     row-gap: 11px;
 
     width: 560px;
-    height: 242px;
+    min-height: 242px;
     margin: 40px auto;
     padding: 55px 55px 55px 62px;
 
     background-color: $color-resolution-blue;
 
     box-shadow: $shadow-resolution-blue;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    scrollbar-width: none;
 
     &::-webkit-scrollbar {
       width: 5px;
@@ -39,7 +36,7 @@
       row-gap: 11px;
 
       width: 226px;
-      height: 335px;
+      min-height: 335px;
       padding: 31px 10px 30px 18px;
     }
   }

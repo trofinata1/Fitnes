@@ -10,7 +10,7 @@ export const getReviewsSlider = () => {
     reviewsList.style.rowGap = '0';
     reviewsList.style.flexWrap = 'nowrap';
     reviewsList.style.justifyContent = 'start';
-    reviewsSwiper.style.height = '415px';
+    reviewsList.style.height = 'auto';
 
     reviewsItems.forEach((item) => {
       item.style.width = '100%';

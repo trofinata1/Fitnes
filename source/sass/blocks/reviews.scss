@@ -1,4 +1,14 @@
 .reviews {
+  padding: 0 0 80px;
+
+  @include vp-1199 {
+    padding: 0 0 60px;
+  }
+
+  @include vp-767 {
+    padding: 0 0 0;
+  }
+
   .container {
     position: relative;
 
@@ -163,12 +173,6 @@
     width: 100%;
 
     margin: 0 auto;
-
-    overflow: hidden;
-
-    @include vp-767 {
-      height: 415px;
-    }
   }
 
   .reviews__photo {
@@ -179,5 +183,13 @@
       grid-row-start: 1;
       grid-row-end: 2;
     }
+  }
+
+  .swiper-slide {
+    height: 242px;
+  }
+
+  .swiper-slide-active {
+    height: auto;
   }
 }

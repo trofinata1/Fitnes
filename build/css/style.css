@@ -851,7 +851,6 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin: -12px 0 0;
 }
 
 .with-js {
@@ -1494,8 +1493,8 @@ button,
 
 .gym .gym__video {
   position: absolute;
+  top: 287px;
   right: 359px;
-  bottom: -115px;
   width: 364px;
   max-width: 364px;
   height: 228px;
@@ -2056,7 +2055,7 @@ button,
   background-color: #003d85;
   background-image: url("../img/decoration/promo@1x.png");
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   content: "";
 }
 
@@ -2164,6 +2163,7 @@ button,
   height: 331px;
   background-image: url("../img/decoration/disks@1x.png");
   background-repeat: no-repeat;
+  background-size: cover;
   z-index: -1;
   content: "";
 }
@@ -2418,6 +2418,10 @@ button,
   margin: 5px 0 4px;
 }
 
+.reviews {
+  padding: 0 0 80px;
+}
+
 .reviews .container {
   position: relative;
 }
@@ -2511,7 +2515,6 @@ button,
   position: relative;
   width: 100%;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 .reviews .reviews__photo {
@@ -2519,6 +2522,14 @@ button,
   grid-row-start: 1;
   -ms-grid-row-span: 2;
   grid-row-end: 3;
+}
+
+.reviews .swiper-slide {
+  height: 242px;
+}
+
+.reviews .swiper-slide-active {
+  height: auto;
 }
 
 .reviews-card .reviews-card__information {
@@ -2533,15 +2544,12 @@ button,
   column-gap: 28px;
   row-gap: 11px;
   width: 560px;
-  height: 242px;
+  min-height: 242px;
   margin: 40px auto;
   padding: 55px 55px 55px 62px;
   background-color: #1c3374;
   -webkit-box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
   box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
-  overflow-y: scroll;
-  overflow-x: hidden;
-  scrollbar-width: none;
 }
 
 .reviews-card .reviews-card__information::-webkit-scrollbar {
@@ -2786,10 +2794,6 @@ button,
     display: block;
   }
 
-  .sections-row {
-    margin: -32px 0 0;
-  }
-
   .container {
     padding: 0 45px;
   }
@@ -2814,7 +2818,7 @@ button,
   }
 
   .coaches .coaches__swiper {
-    width: 866px;
+    width: 566px;
     margin: 0 auto;
   }
 
@@ -3026,6 +3030,7 @@ button,
   }
 
   .gym .gym__video {
+    top: auto;
     bottom: -103px;
     left: 50%;
     width: 466px;
@@ -3328,6 +3333,10 @@ button,
     margin: 0 0 4px;
   }
 
+  .reviews {
+    padding: 0 0 60px;
+  }
+
   .reviews h2 {
     margin: 0;
     font-size: 42px;
@@ -3379,10 +3388,6 @@ button,
 }
 
 @media (max-width: 1023px) {
-  .coaches .coaches__swiper {
-    width: 566px;
-  }
-
   .contacts .container {
     margin: 0 auto 0 133px;
   }
@@ -3454,6 +3459,11 @@ button,
     bottom: 149px;
     width: 10px;
     height: 19px;
+  }
+
+  .coaches .coaches__swiper {
+    width: 226px;
+    margin: 0 auto;
   }
 
   .coaches .coaches__button--prev {
@@ -3880,7 +3890,7 @@ button,
   }
 
   .rates .container::after {
-    background-image: none;
+    display: none;
   }
 
   .rates h2 {
@@ -3952,6 +3962,10 @@ button,
     margin: 0 0 1px;
   }
 
+  .reviews {
+    padding: 0 0 0;
+  }
+
   .reviews .container {
     padding: 0;
   }
@@ -4006,10 +4020,6 @@ button,
     margin: 9px 0 0 22px;
   }
 
-  .reviews .reviews__swiper {
-    height: 415px;
-  }
-
   .reviews .reviews__photo {
     -ms-grid-row: 1;
     grid-row-start: 1;
@@ -4023,7 +4033,7 @@ button,
     column-gap: 25px;
     row-gap: 11px;
     width: 226px;
-    height: 335px;
+    min-height: 335px;
     padding: 31px 10px 30px 18px;
   }
 
@@ -4053,19 +4063,8 @@ button,
     background-image: url("../img/decoration/sales-tablet@2x.jpg");
   }
 
-  .rates .container::after {
-    background-image: none;
-  }
-
   .request .container::after {
     background-image: url("../img/decoration/games-mobile@2x.jpg");
-  }
-}
-
-@media (max-width: 639px) {
-  .coaches .coaches__swiper {
-    width: 226px;
-    height: 274px;
   }
 }
 
