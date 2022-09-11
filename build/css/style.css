@@ -2484,7 +2484,7 @@ button,
   top: 136px;
   width: 36px;
   height: 52px;
-  padding: 10px;
+  padding: 0;
   background-color: transparent;
   background-image: url("../img/decoration/arrow@1x.png");
   background-repeat: no-repeat;
@@ -3192,7 +3192,7 @@ button,
   }
 
   .promo .social-list {
-    display: block;
+    display: none;
   }
 
   .promo a {
@@ -3344,12 +3344,18 @@ button,
     line-height: 42px;
   }
 
+  .reviews button {
+    top: 146px;
+    width: 16px;
+    height: 32px;
+  }
+
   .reviews .reviews__button--prev {
-    left: -10px;
+    left: 0;
   }
 
   .reviews .reviews__button--next {
-    right: -10px;
+    right: 0;
   }
 
   .reviews-card .reviews-card__information {
@@ -4005,14 +4011,15 @@ button,
     top: 196px;
     width: 10px;
     height: 19px;
+    background-size: cover;
   }
 
   .reviews .reviews__button--prev {
-    left: 15px;
+    left: 14px;
   }
 
   .reviews .reviews__button--next {
-    right: 15px;
+    right: 14px;
   }
 
   .reviews img {
