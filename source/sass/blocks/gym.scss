@@ -251,10 +251,6 @@
 
         background-size: contain;
       }
-
-      @include retina {
-        background-image: url("../img/decoration/round@2x.png");
-      }
     }
   }
 

@@ -22,15 +22,16 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
-    playVideo();
     addClassToTab();
     onTabsClick();
     getCoachesSlider();
     getReviewsSlider();
+    playVideo();
 
     if (document.querySelector('.form')) {
       interactWithForm();
     }
+
   });
 });
 
@@ -58,3 +59,4 @@ window.addEventListener('DOMContentLoaded', () => {
 // breakpointChecker();
 
 // используйте .closest(el)
+//

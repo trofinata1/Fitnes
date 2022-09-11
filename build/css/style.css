@@ -2515,6 +2515,7 @@ button,
   position: relative;
   width: 100%;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 .reviews .reviews__photo {
@@ -4075,10 +4076,6 @@ button,
 
   .gym .gym__video::after {
     background-image: url("../img/decoration/video-cover@2x.png");
-  }
-
-  .gym button::before {
-    background-image: url("../img/decoration/round@2x.png");
   }
 
   .main-offer div::after {
