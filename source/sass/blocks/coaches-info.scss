@@ -8,7 +8,8 @@
     z-index: -1;
 
     @include vp-767 {
-      margin: 37px 0 0 0;
+      width: fit-content;
+      margin: 37px 0 0;
     }
   }
 
@@ -27,9 +28,13 @@
 
     background-color: transparent;
 
-    @include vp-767 {
-      height: auto;
+    @include vp-1199 {
+      min-height: auto;
       padding: 0 0 0 17px;
+    }
+
+    @include vp-767 {
+      min-height: auto;
     }
 
     &::before {
@@ -46,7 +51,7 @@
 
       content: "";
 
-      @include vp-767 {
+      @include vp-1199 {
         left: 0;
       }
     }
@@ -55,21 +60,35 @@
   p {
     margin: 0;
 
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 16px;
     text-align: center;
-    color: $color-spindle;
 
     word-break: break-all;
   }
 
   .coaches-info__name {
-    margin: 0;
+    width: fit-content;
+    margin: 0 auto;
 
     font-weight: 700;
     font-size: 18px;
     line-height: 27px;
     color: $color-default-white;
+
+    @include vp-767 {
+      position: relative;
+
+      z-index: 1;
+    }
+  }
+
+  .coaches-info__sport {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 16px;
+    color: $color-spindle;
+
+    @include vp-767 {
+      text-align: center;
+    }
   }
 }

@@ -27,16 +27,19 @@
 .social-list--row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 11px;
 
   li {
     width: 25px;
     height: 25px;
-    margin: 0;
+    margin: 0 11px 11px 0;
 
     background-color: $color-default-white;
 
     border-radius: 50%;
+
+    &:last-child {
+      margin: 0 0 11px;
+    }
   }
 
   a {

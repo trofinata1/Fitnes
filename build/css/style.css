@@ -1132,20 +1132,26 @@ button,
 
 .coaches-info p {
   margin: 0;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 16px;
   text-align: center;
-  color: #b6bdcc;
   word-break: break-all;
 }
 
 .coaches-info .coaches-info__name {
-  margin: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
   font-weight: 700;
   font-size: 18px;
   line-height: 27px;
   color: #ffffff;
+}
+
+.coaches-info .coaches-info__sport {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  color: #b6bdcc;
 }
 
 .contacts {
@@ -1430,7 +1436,7 @@ button,
 }
 
 .footer .social-list {
-  max-width: 100px;
+  max-width: 110px;
   margin: 0 5px 0 auto;
 }
 
@@ -1816,7 +1822,7 @@ button,
   flex-direction: column;
   min-height: 211px;
   padding: 25px 35px 30px 28px;
-  border: 7px solid transparent;
+  border: 7px solid;
   -o-border-image: -o-linear-gradient(left top, #b80027 25.38%, #003d85 74.89%);
   border-image: -webkit-gradient(linear, left top, right bottom, color-stop(25.38%, #b80027), color-stop(74.89%, #003d85));
   border-image: linear-gradient(to right bottom, #b80027 25.38%, #003d85 74.89%);
@@ -2010,7 +2016,10 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  row-gap: 30px;
+}
+
+.order div {
+  margin-bottom: 30px;
 }
 
 .order p {
@@ -2589,15 +2598,18 @@ button,
   display: grid;
   -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
-  gap: 11px;
 }
 
 .social-list--row li {
   width: 25px;
   height: 25px;
-  margin: 0;
+  margin: 0 11px 11px 0;
   background-color: #ffffff;
   border-radius: 50%;
+}
+
+.social-list--row li:last-child {
+  margin: 0 0 11px;
 }
 
 .social-list--row a {
@@ -2814,12 +2826,39 @@ button,
     text-align: center;
   }
 
+  .coaches li {
+    height: auto;
+    min-height: 294px;
+    padding: 0;
+  }
+
+  .coaches li:hover h3 + div,
+  .coaches li:focus-within h3 + div {
+    z-index: 0;
+  }
+
   .coaches h3 {
     bottom: 23px;
   }
 
+  .coaches h3 + div {
+    position: absolute;
+    width: 100%;
+    padding: 52px 40px 20px 55px;
+    z-index: -1;
+  }
+
+  .coaches img {
+    position: relative;
+    min-height: 294px;
+  }
+
+  .coaches button {
+    bottom: calc(50% - 57px);
+  }
+
   .coaches .coaches__swiper {
-    width: 566px;
+    width: calc(100% - 112px);
     margin: 0 auto;
   }
 
@@ -2829,6 +2868,15 @@ button,
 
   .coaches .coaches__button--next {
     right: 44px;
+  }
+
+  .coaches-info li {
+    min-height: auto;
+    padding: 0 0 0 17px;
+  }
+
+  .coaches-info li::before {
+    left: 0;
   }
 
   .contacts {
@@ -3351,11 +3399,11 @@ button,
   }
 
   .reviews .reviews__button--prev {
-    left: 0;
+    left: calc((100% - 677px) / 2);
   }
 
   .reviews .reviews__button--next {
-    right: 0;
+    right: calc((100% - 677px) / 2);
   }
 
   .reviews-card .reviews-card__information {
@@ -3421,6 +3469,10 @@ button,
 }
 
 @media (max-width: 839px) {
+  .coaches img {
+    height: 294px;
+  }
+
   .features li {
     width: 294px;
   }
@@ -3448,28 +3500,36 @@ button,
   }
 
   .coaches {
-    padding: 0 0 47px;
+    padding: 0 0 70px;
   }
 
   .coaches h2 {
-    margin: 0 0 42px;
+    margin: 0 0 40px;
     font-size: 32px;
     line-height: 32px;
   }
 
   .coaches li {
-    height: 274px;
+    min-height: 274px;
+  }
+
+  .coaches h3 + div {
     padding: 42px 26px 30px 34px;
   }
 
+  .coaches img {
+    height: 100%;
+    min-height: 274px;
+  }
+
   .coaches button {
-    bottom: 149px;
+    bottom: calc(50% - 45px);
     width: 10px;
     height: 19px;
   }
 
   .coaches .coaches__swiper {
-    width: 226px;
+    width: calc(100% - 64px);
     margin: 0 auto;
   }
 
@@ -3482,16 +3542,23 @@ button,
   }
 
   .coaches-info ul {
-    margin: 37px 0 0 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 37px 0 0;
   }
 
   .coaches-info li {
-    height: auto;
-    padding: 0 0 0 17px;
+    min-height: auto;
   }
 
-  .coaches-info li::before {
-    left: 0;
+  .coaches-info .coaches-info__name {
+    position: relative;
+    z-index: 1;
+  }
+
+  .coaches-info .coaches-info__sport {
+    text-align: center;
   }
 
   .contacts {
@@ -3555,7 +3622,7 @@ button,
   }
 
   .features h2 {
-    margin: 0 auto 59px;
+    margin: 0 auto 39px;
     padding: 0 15px;
     font-size: 32px;
     line-height: 32px;
@@ -3569,7 +3636,7 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    row-gap: 50px;
+    row-gap: 28px;
     width: 100%;
   }
 
@@ -3592,7 +3659,7 @@ button,
 
   .features .features__center-item {
     width: 100%;
-    margin: -7px 0 4px;
+    margin: 17px 0 4px;
     padding: 35px 55px 15px;
   }
 
@@ -3619,10 +3686,11 @@ button,
   }
 
   .features-card .features-card__info {
+    top: 0;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    margin: 0 auto;
+    margin: 0 auto 20px;
   }
 
   .form div {
@@ -3978,7 +4046,7 @@ button,
   }
 
   .reviews h2 {
-    margin: 0 0 2px;
+    margin: 0 0 5px;
     font-size: 32px;
     line-height: 32px;
   }
@@ -3988,7 +4056,7 @@ button,
   }
 
   .reviews h3 {
-    margin: 16px 20px 0 0;
+    margin: 18px 19px auto 0;
     line-height: 26px;
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
@@ -4008,9 +4076,10 @@ button,
   }
 
   .reviews button {
-    top: 196px;
+    top: 50%;
     width: 10px;
     height: 19px;
+    margin: -10px 0 0;
     background-size: cover;
   }
 
@@ -4039,10 +4108,10 @@ button,
     -webkit-column-gap: 25px;
     -moz-column-gap: 25px;
     column-gap: 25px;
-    row-gap: 11px;
-    width: 226px;
+    row-gap: 15px;
+    width: calc(100% - 96px);
     min-height: 335px;
-    padding: 31px 10px 30px 18px;
+    padding: 31px 10px 36px 18px;
   }
 
   .tabs-btn.is-active::after {

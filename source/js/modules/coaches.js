@@ -11,7 +11,7 @@ export const getCoachesSlider = () => {
     coachesList.style.rowGap = '0';
     coachesList.style.flexWrap = 'nowrap';
     coachesList.style.justifyContent = 'start';
-    coachesSwiper.style.height = '294px';
+    coachesSwiper.style.height = '100%';
 
     if (coachesItems) {
       coachesItems.forEach((item) => {
