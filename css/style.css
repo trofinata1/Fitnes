@@ -2595,13 +2595,12 @@ button,
   display: grid;
   -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
-  gap: 11px;
 }
 
 .social-list--row li {
   width: 25px;
   height: 25px;
-  margin: 0;
+  margin: 0 11px 11px 0;
   background-color: #ffffff;
   border-radius: 50%;
 }
@@ -3616,7 +3615,7 @@ button,
   }
 
   .features h2 {
-    margin: 0 auto 59px;
+    margin: 0 auto 39px;
     padding: 0 15px;
     font-size: 32px;
     line-height: 32px;
@@ -3630,7 +3629,7 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    row-gap: 50px;
+    row-gap: 28px;
     width: 100%;
   }
 
@@ -3653,7 +3652,7 @@ button,
 
   .features .features__center-item {
     width: 100%;
-    margin: -7px 0 4px;
+    margin: 17px 0 4px;
     padding: 35px 55px 15px;
   }
 
@@ -3680,10 +3679,11 @@ button,
   }
 
   .features-card .features-card__info {
+    top: 0;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    margin: 0 auto;
+    margin: 0 auto 20px;
   }
 
   .form div {
@@ -3706,6 +3706,7 @@ button,
   }
 
   .footer .social-list {
+    max-width: 110px;
     margin: 19px auto 0 0;
   }
 
@@ -4039,6 +4040,7 @@ button,
   }
 
   .reviews h2 {
+    margin: 0 0 5px;
     font-size: 32px;
     line-height: 32px;
   }
